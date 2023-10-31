@@ -1,0 +1,68 @@
+[
+    {
+        "id": "278",
+        "name": "Tr\u1ea7n Thanh Vinh ",
+        "email": "Tranthanhvinh242@gmail.com",
+        "birthday": "2000-02-24",
+        "username": "admin",
+        "password": "1",
+        "role": "1"
+    },
+    {
+        "id": "279",
+        "name": "Tr\u1ea7n Thanh Vinh ",
+        "email": "Tranthanhvinh242@gmail.com",
+        "birthday": "2000-02-24",
+        "username": "user",
+        "password": "1",
+        "role": "0"
+    },
+    {
+        "id": "282",
+        "name": "q",
+        "email": "q@q",
+        "birthday": "0003-02-13",
+        "username": "1",
+        "password": "1",
+        "role": "0"
+    },
+    {
+        "id": "283",
+        "name": "Tr\u1ecbnh Ph\u01b0\u01a1ng Th\u1ee7y",
+        "email": "trinhphuongthuy@gmail.com",
+        "birthday": "9999-09-09",
+        "username": "trinhphuongthuy",
+        "password": "trinhphuongthuy",
+        "role": "0"
+    },
+    {
+        "id": "284",
+        "name": "V\u0103n Phong",
+        "email": "vanphong0205@gmail.com",
+        "birthday": "2000-05-02",
+        "username": "phongemzz001",
+        "password": "Phong@\/123",
+        "role": "0"
+    },
+    {
+        "id": "286",
+        "full_name": "z",
+        "nickname": null,
+        "avatar_img": null,
+        "phone_number": null,
+        "facebook": null,
+        "email": null,
+        "date_of_birth": null,
+        "address": null,
+        "account_number": null,
+        "account_balance": null,
+        "account_type": null,
+        "job_title": null,
+        "workplace": null,
+        "username": "z",
+        "password": "z",
+        "role": "0",
+        "created_at": "2023-10-28 02:14:54",
+        "updated_at": "2023-10-28 02:14:54"
+    }
+]
