@@ -126,7 +126,7 @@ License: For each use you must have a valid license purchased only from above li
 
                     <!--begin::Logo-->
                     <div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-15">
-                        <a href="index.html">
+                        <a href="{{ route('home') }}">
                             <img alt="Logo" src="{{ asset('BudgetBuddy/media/logos/default.svg') }}"
                                 class="h-35px d-none d-sm-inline app-sidebar-logo-default theme-light-show" />
                             <img alt="Logo" src="{{ asset('BudgetBuddy/media/logos/default-dark.svg') }}"
@@ -148,587 +148,60 @@ License: For each use you must have a valid license purchased only from above li
                             data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
                             <!--begin::Menu-->
                             <div class=" menu
-            menu-rounded
-            menu-active-bg
-            menu-state-primary
-            menu-column
-            menu-lg-row
-            menu-title-gray-700
-            menu-icon-gray-500
-            menu-arrow-gray-500
-            menu-bullet-gray-500
-            my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0
-        "
+                                    menu-rounded
+                                    menu-active-bg
+                                    menu-state-primary
+                                    menu-column
+                                    menu-lg-row
+                                    menu-title-gray-700
+                                    menu-icon-gray-500
+                                    menu-arrow-gray-500
+                                    menu-bullet-gray-500
+                                    my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0
+                                "
                                 id="kt_app_header_menu" data-kt-menu="true">
+
                                 <!--begin:Menu item-->
                                 <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                     data-kt-menu-placement="bottom-start"
-                                    class="menu-item here show menu-lg-down-accordion me-lg-1">
-                                    <!--begin:Menu link--><span class="menu-link"><span
-                                            class="menu-title">Dashboards</span><span
-                                            class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                    <div
-                                        class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
-                                        <!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link active"
-                                                href="index.html"><span class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Multipurpose</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="dashboards/social.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Social</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="dashboards/crypto.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Crypto</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="dashboards/delivery.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Delivery</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="dashboards/website-analytics.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Website Analytics</span></a><!--end:Menu link-->
-                                        </div><!--end:Menu item-->
-                                    </div><!--end:Menu sub-->
-                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                    data-kt-menu-placement="bottom-start"
                                     class="menu-item menu-lg-down-accordion me-lg-1"><!--begin:Menu link--><span
-                                        class="menu-link"><span class="menu-title">Pages</span><span
+                                        class="menu-link"><span class="menu-title">Trang</span><span
                                             class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
                                     <div
                                         class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
                                         <!--begin:Menu item-->
                                         <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="pages/about.html"><span class="menu-bullet"><span
+                                                href="{{ route('about') }}"><span class="menu-bullet"><span
                                                         class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">About Us</span></a><!--end:Menu link--></div>
+                                                    class="menu-title">Giới thiệu</span></a><!--end:Menu link--></div>
                                         <!--end:Menu item--><!--begin:Menu item-->
                                         <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="pages/invoice.html"><span
+                                                href="{{ route('invoice') }}"><span
                                                     class="menu-bullet"><span
                                                         class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Invoice</span></a><!--end:Menu link--></div>
+                                                    class="menu-title">Hóa đơn chung</span></a><!--end:Menu link--></div>
                                         <!--end:Menu item--><!--begin:Menu item-->
                                         <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="pages/faq.html"><span class="menu-bullet"><span
+                                                href="{{ route('faq') }}"><span class="menu-bullet"><span
                                                         class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">FAQ</span></a><!--end:Menu link--></div>
+                                                    class="menu-title">Câu hỏi thường gặp</span></a><!--end:Menu link--></div>
                                         <!--end:Menu item--><!--begin:Menu item-->
                                         <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="pages/wizard.html"><span
+                                                href="{{ route('wizard') }}"><span
                                                     class="menu-bullet"><span
                                                         class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Wizard</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="pages/pricing.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Pricing</span></a><!--end:Menu link--></div>
+                                                    class="menu-title">Tạo phòng</span></a><!--end:Menu link--></div>
                                         <!--end:Menu item-->
                                     </div><!--end:Menu sub-->
                                 </div><!--end:Menu item--><!--begin:Menu item-->
                                 <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                     data-kt-menu-placement="bottom-start"
                                     class="menu-item menu-lg-down-accordion me-lg-1"><!--begin:Menu link--><span
-                                        class="menu-link"><span class="menu-title">Account</span><span
+                                        class="menu-link"><span class="menu-title">Ứng dụng</span><span
                                             class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
                                     <div
                                         class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
                                         <!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="account/overview.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Overview</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="account/settings.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Settings</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="account/security.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Security</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="account/activity.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Activity</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="account/billing.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Billing</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="account/statements.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Statements</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="account/referrals.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Referrals</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="account/api-keys.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">API Keys</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="account/logs.html"><span
-                                                    class="menu-bullet"><span
-                                                        class="bullet bullet-dot"></span></span><span
-                                                    class="menu-title">Logs</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item-->
-                                    </div><!--end:Menu sub-->
-                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                    data-kt-menu-placement="bottom-start"
-                                    class="menu-item menu-lg-down-accordion me-lg-1"><!--begin:Menu link--><span
-                                        class="menu-link"><span class="menu-title">Auth</span><span
-                                            class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                    <div
-                                        class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0 w-lg-600px">
-                                        <!--begin:Pages menu-->
-                                        <div class="menu-state-bg p-4 p-lg-8">
-                                            <!--begin:Row-->
-                                            <div class="row">
-                                                <!--begin:Col-->
-                                                <div class="col-lg-4 mb-6 mb-lg-0">
-                                                    <!--begin:Menu section-->
-                                                    <div class="mb-0">
-                                                        <!--begin:Menu heading-->
-                                                        <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Login</h4>
-                                                        <!--end:Menu heading-->
-
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/sign-in/basic.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Sign In Basic</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/sign-up/basic.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Sign Up Basic</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/sign-up/multi-steps.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Sign Up Multi-steps</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/sign-in/password-reset.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Password Reset</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/sign-in/new-password.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">New Password</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/sign-up/free-trial.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Free Trial</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Menu section-->
-                                                </div>
-                                                <!--end:Col-->
-
-                                                <!--begin:Col-->
-                                                <div class="col-lg-4 mb-6 mb-lg-0">
-                                                    <!--begin:Menu section-->
-                                                    <div class="mb-0">
-                                                        <!--begin:Menu heading-->
-                                                        <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">General</h4>
-                                                        <!--end:Menu heading-->
-
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/sign-up/coming-soon.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Coming Soon</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/general/welcome.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Welcome Message</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/general/verify-email.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Verify Email</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/general/password-confirmation.html"
-                                                                class="menu-link ">
-                                                                <span
-                                                                    class="menu-title">Password&nbsp;Confirmation</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/general/deactivation.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Account Deactivation</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/general/error-404.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Error 404</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/general/error-500.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Error 500</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Menu section-->
-                                                </div>
-                                                <!--end:Col-->
-
-                                                <!--begin:Col-->
-                                                <div class="col-lg-4 mb-6 mb-lg-0">
-                                                    <!--begin:Menu section-->
-                                                    <div class="mb-0">
-                                                        <!--begin:Menu heading-->
-                                                        <h4 class="fs-6 fs-lg-4 fw-bold mb-3 ms-4">Email Templates</h4>
-                                                        <!--end:Menu heading-->
-
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/email/verify-email.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Verify Email</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/email/invitation.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Account Invitation</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/email/password-reset.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Password Reset</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item p-0 m-0">
-                                                            <!--begin:Menu link-->
-                                                            <a href="authentication/email/password-change.html"
-                                                                class="menu-link ">
-                                                                <span class="menu-title">Password Changed</span>
-                                                            </a>
-                                                            <!--end:Menu link-->
-                                                        </div>
-                                                        <!--end:Menu item-->
-                                                    </div>
-                                                    <!--end:Menu section-->
-                                                </div>
-                                                <!--end:Col-->
-                                            </div>
-                                            <!--end:Row-->
-                                        </div>
-                                        <!--end:Pages menu-->
-                                    </div><!--end:Menu sub-->
-                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                    data-kt-menu-placement="bottom-start"
-                                    class="menu-item menu-lg-down-accordion me-lg-1"><!--begin:Menu link--><span
-                                        class="menu-link"><span class="menu-title">Apps</span><span
-                                            class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                    <div
-                                        class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
-                                        <!--begin:Menu item-->
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                            data-kt-menu-placement="right-start"
-                                            class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                                class="menu-link"><span class="menu-icon"><i
-                                                        class="ki-duotone ki-handcart fs-2"></i></span><span
-                                                    class="menu-title">eCommerce</span><span
-                                                    class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                            <div
-                                                class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-200px">
-                                                <!--begin:Menu item-->
-                                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                                    data-kt-menu-placement="right-start"
-                                                    class="menu-item menu-lg-down-accordion">
-                                                    <!--begin:Menu link--><span class="menu-link"><span
-                                                            class="menu-bullet"><span
-                                                                class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Catalog</span><span
-                                                            class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                    <div
-                                                        class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/catalog/products.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Products</span></a><!--end:Menu link-->
-                                                        </div><!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/catalog/categories.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Categories</span></a><!--end:Menu link-->
-                                                        </div><!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/catalog/add-product.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Add
-                                                                    Product</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/catalog/edit-product.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Edit
-                                                                    Product</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/catalog/add-category.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Add
-                                                                    Category</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/catalog/edit-category.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Edit
-                                                                    Category</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item-->
-                                                    </div><!--end:Menu sub-->
-                                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                                <div data-kt-menu-trigger="click"
-                                                    class="menu-item menu-accordion menu-sub-indention">
-                                                    <!--begin:Menu link--><span class="menu-link"><span
-                                                            class="menu-bullet"><span
-                                                                class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Sales</span><span
-                                                            class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                    <div class="menu-sub menu-sub-accordion"><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/sales/listing.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Orders
-                                                                    Listing</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/sales/details.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Order
-                                                                    Details</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/sales/add-order.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Add
-                                                                    Order</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/sales/edit-order.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Edit
-                                                                    Order</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item-->
-                                                    </div><!--end:Menu sub-->
-                                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                                <div data-kt-menu-trigger="click"
-                                                    class="menu-item menu-accordion menu-sub-indention">
-                                                    <!--begin:Menu link--><span class="menu-link"><span
-                                                            class="menu-bullet"><span
-                                                                class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Customers</span><span
-                                                            class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                    <div class="menu-sub menu-sub-accordion"><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/customers/listing.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Customers
-                                                                    Listing</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/customers/details.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Customers
-                                                                    Details</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item-->
-                                                    </div><!--end:Menu sub-->
-                                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                                <div data-kt-menu-trigger="click"
-                                                    class="menu-item menu-accordion menu-sub-indention">
-                                                    <!--begin:Menu link--><span class="menu-link"><span
-                                                            class="menu-bullet"><span
-                                                                class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Reports</span><span
-                                                            class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                    <div class="menu-sub menu-sub-accordion"><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/reports/view.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Products
-                                                                    Viewed</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/reports/sales.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Sales</span></a><!--end:Menu link-->
-                                                        </div><!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/reports/returns.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Returns</span></a><!--end:Menu link-->
-                                                        </div><!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/reports/customer-orders.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Customer
-                                                                    Orders</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/ecommerce/reports/shipping.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Shipping</span></a><!--end:Menu link-->
-                                                        </div><!--end:Menu item-->
-                                                    </div><!--end:Menu sub-->
-                                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                                <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                        href="apps/ecommerce/settings.html"><span
-                                                            class="menu-bullet"><span
-                                                                class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Settings</span></a><!--end:Menu link-->
-                                                </div><!--end:Menu item-->
-                                            </div><!--end:Menu sub-->
-                                        </div><!--end:Menu item--><!--begin:Menu item-->
                                         <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
                                             data-kt-menu-placement="right-start"
                                             class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
@@ -736,7 +209,7 @@ License: For each use you must have a valid license purchased only from above li
                                                         class="ki-duotone ki-briefcase fs-2"><span
                                                             class="path1"></span><span
                                                             class="path2"></span></i></span><span
-                                                    class="menu-title">Customers</span><span
+                                                    class="menu-title">Bạn bè</span><span
                                                     class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
                                             <div
                                                 class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-200px">
@@ -745,101 +218,20 @@ License: For each use you must have a valid license purchased only from above li
                                                         href="apps/customers/getting-started.html"><span
                                                             class="menu-bullet"><span
                                                                 class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Getting
-                                                            Started</span></a><!--end:Menu link--></div>
+                                                            class="menu-title">Thêm bạn</span></a><!--end:Menu link--></div>
                                                 <!--end:Menu item--><!--begin:Menu item-->
                                                 <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
                                                         href="apps/customers/list.html"><span
                                                             class="menu-bullet"><span
                                                                 class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Customer
-                                                            Listing</span></a><!--end:Menu link--></div>
+                                                            class="menu-title">Danh sách bạn bè</span></a><!--end:Menu link--></div>
                                                 <!--end:Menu item--><!--begin:Menu item-->
                                                 <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
                                                         href="apps/customers/view.html"><span
                                                             class="menu-bullet"><span
                                                                 class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Customer
-                                                            Details</span></a><!--end:Menu link--></div>
+                                                            class="menu-title">Chi tiết bạn bè</span></a><!--end:Menu link--></div>
                                                 <!--end:Menu item-->
-                                            </div><!--end:Menu sub-->
-                                        </div><!--end:Menu item--><!--begin:Menu item-->
-                                        <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                            data-kt-menu-placement="right-start"
-                                            class="menu-item menu-lg-down-accordion"><!--begin:Menu link--><span
-                                                class="menu-link"><span class="menu-icon"><i
-                                                        class="ki-duotone ki-shield-tick fs-2"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span></i></span><span
-                                                    class="menu-title">User Management</span><span
-                                                    class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                            <div
-                                                class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-200px">
-                                                <!--begin:Menu item-->
-                                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                                    data-kt-menu-placement="right-start"
-                                                    class="menu-item menu-lg-down-accordion">
-                                                    <!--begin:Menu link--><span class="menu-link"><span
-                                                            class="menu-bullet"><span
-                                                                class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Users</span><span
-                                                            class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                    <div
-                                                        class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/user-management/users/list.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Users
-                                                                    List</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/user-management/users/view.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">View
-                                                                    User</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item-->
-                                                    </div><!--end:Menu sub-->
-                                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                                <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
-                                                    data-kt-menu-placement="right-start"
-                                                    class="menu-item menu-lg-down-accordion">
-                                                    <!--begin:Menu link--><span class="menu-link"><span
-                                                            class="menu-bullet"><span
-                                                                class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Roles</span><span
-                                                            class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                                    <div
-                                                        class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-225px">
-                                                        <!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/user-management/roles/list.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">Roles
-                                                                    List</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item--><!--begin:Menu item-->
-                                                        <div class="menu-item"><!--begin:Menu link--><a
-                                                                class="menu-link"
-                                                                href="apps/user-management/roles/view.html"><span
-                                                                    class="menu-bullet"><span
-                                                                        class="bullet bullet-dot"></span></span><span
-                                                                    class="menu-title">View
-                                                                    Roles</span></a><!--end:Menu link--></div>
-                                                        <!--end:Menu item-->
-                                                    </div><!--end:Menu sub-->
-                                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                                <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                        href="apps/user-management/permissions.html"><span
-                                                            class="menu-bullet"><span
-                                                                class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Permissions</span></a><!--end:Menu link-->
-                                                </div><!--end:Menu item-->
                                             </div><!--end:Menu sub-->
                                         </div><!--end:Menu item--><!--begin:Menu item-->
                                         <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
@@ -849,7 +241,7 @@ License: For each use you must have a valid license purchased only from above li
                                                         class="ki-duotone ki-file-added fs-2"><span
                                                             class="path1"></span><span
                                                             class="path2"></span></i></span><span
-                                                    class="menu-title">File Manager</span><span
+                                                    class="menu-title">Quản lý tập tin</span><span
                                                     class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
                                             <div
                                                 class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-200px">
@@ -858,26 +250,25 @@ License: For each use you must have a valid license purchased only from above li
                                                         href="apps/file-manager/folders.html"><span
                                                             class="menu-bullet"><span
                                                                 class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Folders</span></a><!--end:Menu link-->
+                                                            class="menu-title">Thư mục</span></a><!--end:Menu link-->
                                                 </div><!--end:Menu item--><!--begin:Menu item-->
                                                 <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
                                                         href="apps/file-manager/files.html"><span
                                                             class="menu-bullet"><span
                                                                 class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Files</span></a><!--end:Menu link-->
+                                                            class="menu-title">Các tập tin</span></a><!--end:Menu link-->
                                                 </div><!--end:Menu item--><!--begin:Menu item-->
                                                 <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
                                                         href="apps/file-manager/blank.html"><span
                                                             class="menu-bullet"><span
                                                                 class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Blank
-                                                            Directory</span></a><!--end:Menu link--></div>
+                                                            class="menu-title">Thư mục trống</span></a><!--end:Menu link--></div>
                                                 <!--end:Menu item--><!--begin:Menu item-->
                                                 <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
                                                         href="apps/file-manager/settings.html"><span
                                                             class="menu-bullet"><span
                                                                 class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Settings</span></a><!--end:Menu link-->
+                                                            class="menu-title">Cài đặt</span></a><!--end:Menu link-->
                                                 </div><!--end:Menu item-->
                                             </div><!--end:Menu sub-->
                                         </div><!--end:Menu item--><!--begin:Menu item-->
@@ -888,7 +279,7 @@ License: For each use you must have a valid license purchased only from above li
                                                             class="path3"></span><span class="path4"></span><span
                                                             class="path5"></span><span
                                                             class="path6"></span></i></span><span
-                                                    class="menu-title">Calendar</span></a><!--end:Menu link--></div>
+                                                    class="menu-title">Lịch</span></a><!--end:Menu link--></div>
                                         <!--end:Menu item--><!--begin:Menu item-->
                                         <div data-kt-menu-trigger="{default:'click', lg: 'hover'}"
                                             data-kt-menu-placement="right-start"
@@ -897,7 +288,7 @@ License: For each use you must have a valid license purchased only from above li
                                                         class="ki-duotone ki-message-text-2 fs-2"><span
                                                             class="path1"></span><span class="path2"></span><span
                                                             class="path3"></span></i></span><span
-                                                    class="menu-title">Chat</span><span
+                                                    class="menu-title">Trò chuyện</span><span
                                                     class="menu-arrow"></span></span><!--end:Menu link--><!--begin:Menu sub-->
                                             <div
                                                 class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-active-bg px-lg-2 py-lg-4 w-lg-200px">
@@ -906,15 +297,13 @@ License: For each use you must have a valid license purchased only from above li
                                                         href="apps/chat/private.html"><span
                                                             class="menu-bullet"><span
                                                                 class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Private
-                                                            Chat</span></a><!--end:Menu link--></div>
+                                                            class="menu-title">Trò chuyện riêng tư</span></a><!--end:Menu link--></div>
                                                 <!--end:Menu item--><!--begin:Menu item-->
                                                 <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
                                                         href="apps/chat/group.html"><span
                                                             class="menu-bullet"><span
                                                                 class="bullet bullet-dot"></span></span><span
-                                                            class="menu-title">Group
-                                                            Chat</span></a><!--end:Menu link--></div>
+                                                            class="menu-title">Trò chuyện nhóm</span></a><!--end:Menu link--></div>
                                                 <!--end:Menu item--><!--begin:Menu item-->
                                                 <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
                                                         href="apps/chat/drawer.html"><span
@@ -924,56 +313,6 @@ License: For each use you must have a valid license purchased only from above li
                                                             Chat</span></a><!--end:Menu link--></div>
                                                 <!--end:Menu item-->
                                             </div><!--end:Menu sub-->
-                                        </div><!--end:Menu item-->
-                                    </div><!--end:Menu sub-->
-                                </div><!--end:Menu item--><!--begin:Menu item-->
-                                <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                    data-kt-menu-placement="bottom-start"
-                                    class="menu-item menu-lg-down-accordion me-lg-1"><!--begin:Menu link--><span
-                                        class="menu-link"><span class="menu-title">Resources</span><span
-                                            class="menu-arrow d-lg-none"></span></span><!--end:Menu link--><!--begin:Menu sub-->
-                                    <div
-                                        class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown px-lg-2 py-lg-4 w-lg-200px">
-                                        <!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="https://preview.keenthemes.com/htmldocs/base/utilities"
-                                                target="_blank"
-                                                title="Check out over 200 in-house components, plugins and ready for use solutions"
-                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                                data-bs-dismiss="click" data-bs-placement="right"><span
-                                                    class="menu-icon"><i class="ki-duotone ki-element-8 fs-2"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span></i></span><span
-                                                    class="menu-title">Components</span></a><!--end:Menu link--></div>
-                                        <!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="https://preview.keenthemes.com/htmldocs"
-                                                target="_blank" title="Check out the complete documentation"
-                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                                data-bs-dismiss="click" data-bs-placement="right"><span
-                                                    class="menu-icon"><i class="ki-duotone ki-abstract-26 fs-2"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span></i></span><span
-                                                    class="menu-title">Documentation</span></a><!--end:Menu link-->
-                                        </div><!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="layout-builder.html"
-                                                title="Build your layout, preview and export HTML for server side integration"
-                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
-                                                data-bs-dismiss="click" data-bs-placement="right"><span
-                                                    class="menu-icon"><i class="ki-duotone ki-switch fs-2"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span></i></span><span
-                                                    class="menu-title">Layout Builder</span></a><!--end:Menu link-->
-                                        </div><!--end:Menu item--><!--begin:Menu item-->
-                                        <div class="menu-item"><!--begin:Menu link--><a class="menu-link"
-                                                href="https://preview.keenthemes.com/htmldocs/getting-started/changelog"
-                                                target="_blank"><span class="menu-icon"><i
-                                                        class="ki-duotone ki-code fs-2"><span
-                                                            class="path1"></span><span class="path2"></span><span
-                                                            class="path3"></span><span
-                                                            class="path4"></span></i></span><span
-                                                    class="menu-title">Changelog v1.0.1</span></a><!--end:Menu link-->
                                         </div><!--end:Menu item-->
                                     </div><!--end:Menu sub-->
                                 </div><!--end:Menu item-->
@@ -1924,10 +1263,10 @@ License: For each use you must have a valid license purchased only from above li
                                     data-kt-menu="true" id="kt_menu_notifications">
                                     <!--begin::Heading-->
                                     <div class="d-flex flex-column bgi-no-repeat rounded-top"
-                                        style="background-image:url('{{ asset('BudgetBuddy/media/misc/menu-header-bg.jpg') }})">
+                                        style="background-image:url({{ asset('BudgetBuddy/media/misc/menu-header-bg.jpg') }})">
                                         <!--begin::Title-->
                                         <h3 class="text-white fw-semibold px-9 mt-10 mb-6">
-                                            Notifications <span class="fs-8 opacity-75 ps-3">24 reports</span>
+                                            Thông báo <span class="fs-8 opacity-75 ps-3">24 tin</span>
                                         </h3>
                                         <!--end::Title-->
 
@@ -1936,18 +1275,18 @@ License: For each use you must have a valid license purchased only from above li
                                             <li class="nav-item">
                                                 <a class="nav-link text-white opacity-75 opacity-state-100 pb-4"
                                                     data-bs-toggle="tab"
-                                                    href="#kt_topbar_notifications_1">Alerts</a>
+                                                    href="#kt_topbar_notifications_1">Cảnh báo</a>
                                             </li>
 
                                             <li class="nav-item">
                                                 <a class="nav-link text-white opacity-75 opacity-state-100 pb-4 active"
                                                     data-bs-toggle="tab"
-                                                    href="#kt_topbar_notifications_2">Updates</a>
+                                                    href="#kt_topbar_notifications_2">Cập nhật</a>
                                             </li>
 
                                             <li class="nav-item">
                                                 <a class="nav-link text-white opacity-75 opacity-state-100 pb-4"
-                                                    data-bs-toggle="tab" href="#kt_topbar_notifications_3">Logs</a>
+                                                    data-bs-toggle="tab" href="#kt_topbar_notifications_3">Lịch sử</a>
                                             </li>
                                         </ul>
                                         <!--end::Tabs-->
@@ -2565,7 +1904,7 @@ License: For each use you must have a valid license purchased only from above li
                                     data-kt-menu="true">
                                     <!--begin::Heading-->
                                     <div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10"
-                                        style="background-image:url('{{ asset('BudgetBuddy/media/misc/menu-header-bg.jpg') }})">
+                                        style="background-image:url({{ asset('BudgetBuddy/media/misc/menu-header-bg.jpg') }})">
                                         <!--begin::Title-->
                                         <h3 class="text-white fw-semibold mb-3">
                                             Quick Links
@@ -2654,7 +1993,7 @@ License: For each use you must have a valid license purchased only from above li
                                     data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                     data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
                                     <img class="symbol symbol-35px symbol-md-45px"
-                                        src="{{ asset('BudgetBuddy/media/avatars/300-3.jpg') }}" alt="user" />
+                                        src="{{ asset('BudgetBuddy/uploads/avatar_img/' . $user->avatar_img) }}" alt="user" />
                                 </div>
 
                                 <!--begin::User account menu-->
@@ -2666,20 +2005,36 @@ License: For each use you must have a valid license purchased only from above li
                                             <!--begin::Avatar-->
                                             <div class="symbol symbol-50px me-5">
                                                 <img alt="Logo"
-                                                    src="{{ asset('BudgetBuddy/media/avatars/300-3.jpg') }}" />
+                                                    src="{{ asset('BudgetBuddy/uploads/avatar_img/' . $user->avatar_img) }}" />
                                             </div>
                                             <!--end::Avatar-->
 
                                             <!--begin::Username-->
                                             <div class="d-flex flex-column">
                                                 <div class="fw-bold d-flex align-items-center fs-5">
-                                                    Max Smith <span
-                                                        class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span>
+                                                    {{ $user->full_name }}
+                                                    @if (isset($user->nickname) && !empty($user->nickname))
+                                                        <span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">
+                                                            {{ $user->nickname }}
+                                                        </span>
+                                                        @else
+                                                        <span class="badge badge-light-danger fw-bold fs-8 px-2 py-1 ms-2">
+                                                            Biệt danh
+                                                        </span>
+                                                    @endif
                                                 </div>
 
-                                                <a href="#"
-                                                    class="fw-semibold text-muted text-hover-primary fs-7">
-                                                    React Developer </a>
+                                                @if (isset($user->job_title) && !empty($user->job_title))
+                                                    <a href="#"
+                                                        class="fw-semibold text-muted text-hover-primary fs-7">
+                                                        {{ $user->job_title }}
+                                                    </a>
+                                                @else
+                                                    <a href="#"
+                                                        class="fw-semibold text-muted text-hover-danger fs-7">
+                                                        Nghề nghiệp
+                                                    </a>
+                                                @endif
                                             </div>
                                             <!--end::Username-->
                                         </div>
@@ -2692,20 +2047,8 @@ License: For each use you must have a valid license purchased only from above li
 
                                     <!--begin::Menu item-->
                                     <div class="menu-item px-5">
-                                        <a href="account/overview.html" class="menu-link px-5">
-                                            My Profile
-                                        </a>
-                                    </div>
-                                    <!--end::Menu item-->
-
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5">
-                                        <a href="apps/projects/list.html" class="menu-link px-5">
-                                            <span class="menu-text">My Projects</span>
-                                            <span class="menu-badge">
-                                                <span
-                                                    class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
-                                            </span>
+                                        <a href="{{ route('overview') }}" class="menu-link px-5">
+                                            Thông tin của tôi
                                         </a>
                                     </div>
                                     <!--end::Menu item-->
@@ -2715,51 +2058,27 @@ License: For each use you must have a valid license purchased only from above li
                                         data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
                                         data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
                                         <a href="#" class="menu-link px-5">
-                                            <span class="menu-title">My Subscription</span>
+                                            <span class="menu-title">Ví của tôi</span>
                                             <span class="menu-arrow"></span>
                                         </a>
 
                                         <!--begin::Menu sub-->
                                         <div class="menu-sub menu-sub-dropdown w-175px py-4">
+
                                             <!--begin::Menu item-->
                                             <div class="menu-item px-3">
-                                                <a href="account/referrals.html"
+                                                <a href="{{ route('billing') }}"
                                                     class="menu-link px-5">
-                                                    Referrals
+                                                    Thanh toán
                                                 </a>
                                             </div>
                                             <!--end::Menu item-->
 
                                             <!--begin::Menu item-->
                                             <div class="menu-item px-3">
-                                                <a href="account/billing.html"
+                                                <a href="{{ route('statements') }}"
                                                     class="menu-link px-5">
-                                                    Billing
-                                                </a>
-                                            </div>
-                                            <!--end::Menu item-->
-
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/statements.html"
-                                                    class="menu-link px-5">
-                                                    Payments
-                                                </a>
-                                            </div>
-                                            <!--end::Menu item-->
-
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/statements.html"
-                                                    class="menu-link d-flex flex-stack px-5">
-                                                    Statements
-
-                                                    <span class="ms-2 lh-0" data-bs-toggle="tooltip"
-                                                        title="View your statements">
-                                                        <i class="ki-duotone ki-information-5 fs-5"><span
-                                                                class="path1"></span><span
-                                                                class="path2"></span><span
-                                                                class="path3"></span></i> </span>
+                                                    Thu nhập
                                                 </a>
                                             </div>
                                             <!--end::Menu item-->
@@ -2770,29 +2089,15 @@ License: For each use you must have a valid license purchased only from above li
 
                                             <!--begin::Menu item-->
                                             <div class="menu-item px-3">
-                                                <div class="menu-content px-3">
-                                                    <label
-                                                        class="form-check form-switch form-check-custom form-check-solid">
-                                                        <input class="form-check-input w-30px h-20px"
-                                                            type="checkbox" value="1" checked="checked"
-                                                            name="notifications" />
-                                                        <span class="form-check-label text-muted fs-7">
-                                                            Notifications
-                                                        </span>
-                                                    </label>
-                                                </div>
+                                                <a href="{{ route('statements') }}"
+                                                    class="menu-link px-5">
+                                                    Ghi nợ
+                                                </a>
                                             </div>
                                             <!--end::Menu item-->
+
                                         </div>
                                         <!--end::Menu sub-->
-                                    </div>
-                                    <!--end::Menu item-->
-
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5">
-                                        <a href="account/statements.html" class="menu-link px-5">
-                                            My Statements
-                                        </a>
                                     </div>
                                     <!--end::Menu item-->
 
@@ -2806,7 +2111,7 @@ License: For each use you must have a valid license purchased only from above li
                                         data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
                                         <a href="#" class="menu-link px-5">
                                             <span class="menu-title position-relative">
-                                                Mode
+                                                Chế độ giao diện
 
                                                 <span class="ms-5 position-absolute translate-middle-y top-50 end-0">
                                                     <i class="ki-duotone ki-night-day theme-light-show fs-2"><span
@@ -2841,7 +2146,7 @@ License: For each use you must have a valid license purchased only from above li
                                                                 class="path9"></span><span
                                                                 class="path10"></span></i> </span>
                                                     <span class="menu-title">
-                                                        Light
+                                                        Sáng
                                                     </span>
                                                 </a>
                                             </div>
@@ -2856,7 +2161,7 @@ License: For each use you must have a valid license purchased only from above li
                                                                 class="path1"></span><span
                                                                 class="path2"></span></i> </span>
                                                     <span class="menu-title">
-                                                        Dark
+                                                        Tối
                                                     </span>
                                                 </a>
                                             </div>
@@ -2873,7 +2178,7 @@ License: For each use you must have a valid license purchased only from above li
                                                                 class="path3"></span><span
                                                                 class="path4"></span></i> </span>
                                                     <span class="menu-title">
-                                                        System
+                                                        Hệ thống
                                                     </span>
                                                 </a>
                                             </div>
@@ -2885,111 +2190,10 @@ License: For each use you must have a valid license purchased only from above li
                                     <!--end::Menu item-->
 
                                     <!--begin::Menu item-->
-                                    <div class="menu-item px-5"
-                                        data-kt-menu-trigger="{default: 'click', lg: 'hover'}"
-                                        data-kt-menu-placement="left-start" data-kt-menu-offset="-15px, 0">
-                                        <a href="#" class="menu-link px-5">
-                                            <span class="menu-title position-relative">
-                                                Language
-
-                                                <span
-                                                    class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">
-                                                    English <img class="w-15px h-15px rounded-1 ms-2"
-                                                        src="{{ asset('BudgetBuddy/media/flags/united-states.svg') }}"
-                                                        alt="" />
-                                                </span>
-                                            </span>
-                                        </a>
-
-                                        <!--begin::Menu sub-->
-                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html"
-                                                    class="menu-link d-flex px-5 active">
-                                                    <span class="symbol symbol-20px me-4">
-                                                        <img class="rounded-1"
-                                                            src="{{ asset('BudgetBuddy/media/flags/united-states.svg') }}"
-                                                            alt="" />
-                                                    </span>
-                                                    English
-                                                </a>
-                                            </div>
-                                            <!--end::Menu item-->
-
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html"
-                                                    class="menu-link d-flex px-5">
-                                                    <span class="symbol symbol-20px me-4">
-                                                        <img class="rounded-1"
-                                                            src="{{ asset('BudgetBuddy/media/flags/spain.svg') }}"
-                                                            alt="" />
-                                                    </span>
-                                                    Spanish
-                                                </a>
-                                            </div>
-                                            <!--end::Menu item-->
-
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html"
-                                                    class="menu-link d-flex px-5">
-                                                    <span class="symbol symbol-20px me-4">
-                                                        <img class="rounded-1"
-                                                            src="{{ asset('BudgetBuddy/media/flags/germany.svg') }}"
-                                                            alt="" />
-                                                    </span>
-                                                    German
-                                                </a>
-                                            </div>
-                                            <!--end::Menu item-->
-
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html"
-                                                    class="menu-link d-flex px-5">
-                                                    <span class="symbol symbol-20px me-4">
-                                                        <img class="rounded-1"
-                                                            src="{{ asset('BudgetBuddy/media/flags/japan.svg') }}"
-                                                            alt="" />
-                                                    </span>
-                                                    Japanese
-                                                </a>
-                                            </div>
-                                            <!--end::Menu item-->
-
-                                            <!--begin::Menu item-->
-                                            <div class="menu-item px-3">
-                                                <a href="account/settings.html"
-                                                    class="menu-link d-flex px-5">
-                                                    <span class="symbol symbol-20px me-4">
-                                                        <img class="rounded-1"
-                                                            src="{{ asset('BudgetBuddy/media/flags/france.svg') }}"
-                                                            alt="" />
-                                                    </span>
-                                                    French
-                                                </a>
-                                            </div>
-                                            <!--end::Menu item-->
-                                        </div>
-                                        <!--end::Menu sub-->
-                                    </div>
-                                    <!--end::Menu item-->
-
-                                    <!--begin::Menu item-->
-                                    <div class="menu-item px-5 my-1">
-                                        <a href="account/settings.html" class="menu-link px-5">
-                                            Account Settings
-                                        </a>
-                                    </div>
-                                    <!--end::Menu item-->
-
-                                    <!--begin::Menu item-->
                                     <div class="menu-item px-5">
-                                        <a href="authentication/sign-in/basic.html"
+                                        <a href="{{ route('sign-out') }}"
                                             class="menu-link px-5">
-                                            Sign Out
+                                            Đăng xuất
                                         </a>
                                     </div>
                                     <!--end::Menu item-->
