@@ -1,5 +1,8 @@
 @extends('BudgetBuddy.master')
 @section('content')
+    @php
+        $percent = session('percent');
+    @endphp
     <!--begin::Main-->
     <div class="app-main flex-column flex-row-fluid " id="kt_app_main">
         <!--begin::Content wrapper-->
@@ -25,8 +28,8 @@
                         <!--end::Card title-->
 
                         <!--begin::Action-->
-                        <a href="{{ route('settings') }}"
-                            class="btn btn-sm btn-primary align-self-center">Chỉnh sửa hồ sơ</a>
+                        <a href="{{ route('settings') }}" class="btn btn-sm btn-primary align-self-center">Chỉnh sửa hồ
+                            sơ</a>
                         <!--end::Action-->
                     </div>
                     <!--begin::Card header-->
@@ -36,12 +39,26 @@
                         <!--begin::Row-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Full Name</label>
+                            <label class="col-lg-4 fw-semibold text-muted">Họ và tên</label>
                             <!--end::Label-->
 
                             <!--begin::Col-->
                             <div class="col-lg-8">
-                                <span class="fw-bold fs-6 text-gray-800">Max Smith</span>
+                                <span class="fw-bold fs-6 text-gray-800">{{ $user->full_name }}</span>
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+
+                        <!--begin::Row-->
+                        <div class="row mb-7">
+                            <!--begin::Label-->
+                            <label class="col-lg-4 fw-semibold text-muted">Nghề nghiệp</label>
+                            <!--end::Label-->
+
+                            <!--begin::Col-->
+                            <div class="col-lg-8">
+                                <span class="fw-bold fs-6 text-gray-800">{{ $user->job_title }}</span>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -50,12 +67,12 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Company</label>
+                            <label class="col-lg-4 fw-semibold text-muted">Địa chỉ công ty</label>
                             <!--end::Label-->
 
                             <!--begin::Col-->
                             <div class="col-lg-8 fv-row">
-                                <span class="fw-semibold text-gray-800 fs-6">Keenthemes</span>
+                                <span class="fw-semibold text-gray-800 fs-6">{{ $user->workplace }}</span>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -65,20 +82,18 @@
                         <div class="row mb-7">
                             <!--begin::Label-->
                             <label class="col-lg-4 fw-semibold text-muted">
-                                Contact Phone
+                                Số điện thoại
 
-                                <span class="ms-1" data-bs-toggle="tooltip"
-                                    title="Phone number must be active">
-                                    <i class="ki-duotone ki-information fs-7"><span
-                                            class="path1"></span><span class="path2"></span><span
-                                            class="path3"></span></i> </span>
+                                <span class="ms-1" data-bs-toggle="tooltip" title="Số điện thoại đang hoạt động">
+                                    <i class="ki-duotone ki-information fs-7"><span class="path1"></span><span
+                                            class="path2"></span><span class="path3"></span></i> </span>
                             </label>
                             <!--end::Label-->
 
                             <!--begin::Col-->
                             <div class="col-lg-8 d-flex align-items-center">
-                                <span class="fw-bold fs-6 text-gray-800 me-2">044 3276 454 935</span>
-                                <span class="badge badge-success">Verified</span>
+                                <span class="fw-bold fs-6 text-gray-800 me-2">{{ $user->phone_number }}</span>
+                                <span class="badge badge-success">Đã xác minh</span>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -87,13 +102,28 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Company Site</label>
+                            <label class="col-lg-4 fw-semibold text-muted">Facebook</label>
+                            <!--end::Label-->
+
+                            <!--begin::Col-->
+                            <div class="col-lg-8">
+                                <a href="{{ $user->facebook }}" target="_blank"
+                                    class="fw-semibold fs-6 text-gray-800 text-hover-primary">{{ $user->facebook }}</a>
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Input group-->
+
+                        <!--begin::Input group-->
+                        <div class="row mb-7">
+                            <!--begin::Label-->
+                            <label class="col-lg-4 fw-semibold text-muted">Email</label>
                             <!--end::Label-->
 
                             <!--begin::Col-->
                             <div class="col-lg-8">
                                 <a href="#"
-                                    class="fw-semibold fs-6 text-gray-800 text-hover-primary">keenthemes.com</a>
+                                    class="fw-semibold fs-6 text-gray-800 text-hover-primary">{{ $user->email }}</a>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -103,19 +133,17 @@
                         <div class="row mb-7">
                             <!--begin::Label-->
                             <label class="col-lg-4 fw-semibold text-muted">
-                                Country
+                                Quê quán
 
-                                <span class="ms-1" data-bs-toggle="tooltip"
-                                    title="Country of origination">
-                                    <i class="ki-duotone ki-information fs-7"><span
-                                            class="path1"></span><span class="path2"></span><span
-                                            class="path3"></span></i> </span>
+                                <span class="ms-1" data-bs-toggle="tooltip" title="Nơi sinh và gia đình">
+                                    <i class="ki-duotone ki-information fs-7"><span class="path1"></span><span
+                                            class="path2"></span><span class="path3"></span></i> </span>
                             </label>
                             <!--end::Label-->
 
                             <!--begin::Col-->
                             <div class="col-lg-8">
-                                <span class="fw-bold fs-6 text-gray-800">Germany</span>
+                                <span class="fw-bold fs-6 text-gray-800">{{ $user->address }}</span>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -124,12 +152,12 @@
                         <!--begin::Input group-->
                         <div class="row mb-7">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Communication</label>
+                            <label class="col-lg-4 fw-semibold text-muted">Ngày sinh</label>
                             <!--end::Label-->
 
                             <!--begin::Col-->
                             <div class="col-lg-8">
-                                <span class="fw-bold fs-6 text-gray-800">Email, Phone</span>
+                                <span class="fw-bold fs-6 text-gray-800">{{ $user->date_of_birth }}</span>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -138,49 +166,59 @@
                         <!--begin::Input group-->
                         <div class="row mb-10">
                             <!--begin::Label-->
-                            <label class="col-lg-4 fw-semibold text-muted">Allow Changes</label>
+                            <label class="col-lg-4 fw-semibold text-muted">Tên ngân hàng</label>
                             <!--begin::Label-->
 
                             <!--begin::Label-->
                             <div class="col-lg-8">
-                                <span class="fw-semibold fs-6 text-gray-800">Yes</span>
+                                <span class="fw-semibold fs-6 text-gray-800">{{ $user->account_type }}</span>
                             </div>
                             <!--begin::Label-->
                         </div>
                         <!--end::Input group-->
 
+                        <!--begin::Input group-->
+                        <div class="row mb-10">
+                            <!--begin::Label-->
+                            <label class="col-lg-4 fw-semibold text-muted">Số tài khoản</label>
+                            <!--begin::Label-->
 
-                        <!--begin::Notice-->
-                        <div
-                            class="notice d-flex bg-light-warning rounded border-warning border border-dashed  p-6">
-                            <!--begin::Icon-->
-                            <i class="ki-duotone ki-information fs-2tx text-warning me-4"><span
-                                    class="path1"></span><span class="path2"></span><span
-                                    class="path3"></span></i> <!--end::Icon-->
-
-                            <!--begin::Wrapper-->
-                            <div class="d-flex flex-stack flex-grow-1 ">
-                                <!--begin::Content-->
-                                <div class=" fw-semibold">
-                                    <h4 class="text-gray-900 fw-bold">We need your attention!</h4>
-
-                                    <div class="fs-6 text-gray-700 ">Your payment was declined. To
-                                        start using tools, please <a class="fw-bold"
-                                            href="{{ route('billing') }}">Add Payment
-                                            Method</a>.</div>
-                                </div>
-                                <!--end::Content-->
-
+                            <!--begin::Label-->
+                            <div class="col-lg-8">
+                                <span class="fw-semibold fs-6 text-gray-800">{{ $user->account_number }}</span>
                             </div>
-                            <!--end::Wrapper-->
+                            <!--begin::Label-->
                         </div>
-                        <!--end::Notice-->
+                        <!--end::Input group-->
+
+                        @if ($percent != 100)
+                            <!--begin::Notice-->
+                            <div class="notice d-flex bg-light-warning rounded border-warning border border-dashed  p-6">
+                                <!--begin::Icon-->
+                                <i class="ki-duotone ki-information fs-2tx text-warning me-4"><span
+                                        class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+                                <!--end::Icon-->
+
+                                <!--begin::Wrapper-->
+                                <div class="d-flex flex-stack flex-grow-1 ">
+                                    <!--begin::Content-->
+                                    <div class=" fw-semibold">
+                                        <h4 class="text-gray-900 fw-bold">Chúng tôi cần sự chú ý của bạn!</h4>
+
+                                        <div class="fs-6 text-gray-700 ">Vui lòng cập nhật hoàn thiện hồ sơ chi tiết </div>
+                                    </div>
+                                    <!--end::Content-->
+                                </div>
+                                <!--end::Wrapper-->
+                            </div>
+                            <!--end::Notice-->
+                        @endif
                     </div>
                     <!--end::Card body-->
                 </div>
                 <!--end::details View-->
                 <!--begin::Row-->
-                <div class="row gy-5 g-xl-10">
+                {{-- <div class="row gy-5 g-xl-10">
                     <!--begin::Col-->
                     <div class="col-xl-8 mb-xl-10">
                         <!--begin::Chart widget 5-->
@@ -202,14 +240,11 @@
                                     <!--begin::Menu-->
                                     <button
                                         class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                        data-kt-menu-trigger="click"
-                                        data-kt-menu-placement="bottom-end"
+                                        data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
                                         data-kt-menu-overflow="true">
                                         <i class="ki-duotone ki-dots-square fs-1 text-gray-400 me-n1"><span
-                                                class="path1"></span><span
-                                                class="path2"></span><span
-                                                class="path3"></span><span
-                                                class="path4"></span></i>
+                                                class="path1"></span><span class="path2"></span><span
+                                                class="path3"></span><span class="path4"></span></i>
                                     </button>
 
 
@@ -218,8 +253,7 @@
                                         data-kt-menu="true">
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
-                                            <div
-                                                class="menu-content fs-6 text-dark fw-bold px-3 py-4">
+                                            <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">
                                                 Quick Actions</div>
                                         </div>
                                         <!--end::Menu item-->
@@ -299,8 +333,7 @@
                                         <!--begin::Menu item-->
                                         <div class="menu-item px-3">
                                             <div class="menu-content px-3 py-3">
-                                                <a class="btn btn-primary  btn-sm px-4"
-                                                    href="#">
+                                                <a class="btn btn-primary  btn-sm px-4" href="#">
                                                     Generate Reports
                                                 </a>
                                             </div>
@@ -357,8 +390,7 @@
                                 <!--begin::Links-->
                                 <div class="text-center mb-1">
                                     <!--begin::Link-->
-                                    <a class="btn btn-sm btn-primary me-2"
-                                        data-bs-target="#kt_modal_create_app"
+                                    <a class="btn btn-sm btn-primary me-2" data-bs-target="#kt_modal_create_app"
                                         data-bs-toggle="modal">
                                         Try now </a>
                                     <!--end::Link-->
@@ -377,11 +409,11 @@
 
                     </div>
                     <!--end::Col-->
-                </div>
+                </div> --}}
                 <!--end::Row-->
 
                 <!--begin::Row-->
-                <div class="row gy-5 g-xl-10">
+                {{-- <div class="row gy-5 g-xl-10">
                     <!--begin::Col-->
                     <div class="col-xl-4">
 
@@ -409,11 +441,9 @@
                             <!--begin::Body-->
                             <div class="card-body">
                                 <!--begin::Scroll-->
-                                <div class="hover-scroll-overlay-y pe-6 me-n6"
-                                    style="height: 415px">
+                                <div class="hover-scroll-overlay-y pe-6 me-n6" style="height: 415px">
                                     <!--begin::Item-->
-                                    <div
-                                        class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
+                                    <div class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
                                         <!--begin::Info-->
                                         <div class="d-flex flex-stack mb-3">
                                             <!--begin::Wrapper-->
@@ -436,15 +466,12 @@
                                                 <!--begin::Menu-->
                                                 <button
                                                     class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
+                                                    data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
                                                     data-kt-menu-overflow="true">
 
                                                     <i class="ki-duotone ki-dots-square fs-1"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span><span
-                                                            class="path3"></span><span
-                                                            class="path4"></span></i>
+                                                            class="path1"></span><span class="path2"></span><span
+                                                            class="path3"></span><span class="path4"></span></i>
                                                 </button>
 
                                                 <!--begin::Menu 2-->
@@ -452,8 +479,7 @@
                                                     data-kt-menu="true">
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
-                                                        <div
-                                                            class="menu-content fs-6 text-dark fw-bold px-3 py-4">
+                                                        <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">
                                                             Quick Actions</div>
                                                     </div>
                                                     <!--end::Menu item-->
@@ -479,8 +505,7 @@
                                                     <!--end::Menu item-->
 
                                                     <!--begin::Menu item-->
-                                                    <div class="menu-item px-3"
-                                                        data-kt-menu-trigger="hover"
+                                                    <div class="menu-item px-3" data-kt-menu-trigger="hover"
                                                         data-kt-menu-placement="right-start">
                                                         <!--begin::Menu item-->
                                                         <a href="#" class="menu-link px-3">
@@ -490,12 +515,10 @@
                                                         <!--end::Menu item-->
 
                                                         <!--begin::Menu sub-->
-                                                        <div
-                                                            class="menu-sub menu-sub-dropdown w-175px py-4">
+                                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Admin Group
                                                                 </a>
                                                             </div>
@@ -503,8 +526,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Staff Group
                                                                 </a>
                                                             </div>
@@ -512,8 +534,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Member Group
                                                                 </a>
                                                             </div>
@@ -538,8 +559,7 @@
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <div class="menu-content px-3 py-3">
-                                                            <a class="btn btn-primary  btn-sm px-4"
-                                                                href="#">
+                                                            <a class="btn btn-primary  btn-sm px-4" href="#">
                                                                 Generate Reports
                                                             </a>
                                                         </div>
@@ -572,8 +592,7 @@
                                     </div>
                                     <!--end::Item-->
                                     <!--begin::Item-->
-                                    <div
-                                        class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
+                                    <div class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
                                         <!--begin::Info-->
                                         <div class="d-flex flex-stack mb-3">
                                             <!--begin::Wrapper-->
@@ -595,15 +614,12 @@
                                                 <!--begin::Menu-->
                                                 <button
                                                     class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
+                                                    data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
                                                     data-kt-menu-overflow="true">
 
                                                     <i class="ki-duotone ki-dots-square fs-1"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span><span
-                                                            class="path3"></span><span
-                                                            class="path4"></span></i>
+                                                            class="path1"></span><span class="path2"></span><span
+                                                            class="path3"></span><span class="path4"></span></i>
                                                 </button>
 
                                                 <!--begin::Menu 2-->
@@ -611,8 +627,7 @@
                                                     data-kt-menu="true">
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
-                                                        <div
-                                                            class="menu-content fs-6 text-dark fw-bold px-3 py-4">
+                                                        <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">
                                                             Quick Actions</div>
                                                     </div>
                                                     <!--end::Menu item-->
@@ -638,8 +653,7 @@
                                                     <!--end::Menu item-->
 
                                                     <!--begin::Menu item-->
-                                                    <div class="menu-item px-3"
-                                                        data-kt-menu-trigger="hover"
+                                                    <div class="menu-item px-3" data-kt-menu-trigger="hover"
                                                         data-kt-menu-placement="right-start">
                                                         <!--begin::Menu item-->
                                                         <a href="#" class="menu-link px-3">
@@ -649,12 +663,10 @@
                                                         <!--end::Menu item-->
 
                                                         <!--begin::Menu sub-->
-                                                        <div
-                                                            class="menu-sub menu-sub-dropdown w-175px py-4">
+                                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Admin Group
                                                                 </a>
                                                             </div>
@@ -662,8 +674,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Staff Group
                                                                 </a>
                                                             </div>
@@ -671,8 +682,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Member Group
                                                                 </a>
                                                             </div>
@@ -697,8 +707,7 @@
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <div class="menu-content px-3 py-3">
-                                                            <a class="btn btn-primary  btn-sm px-4"
-                                                                href="#">
+                                                            <a class="btn btn-primary  btn-sm px-4" href="#">
                                                                 Generate Reports
                                                             </a>
                                                         </div>
@@ -731,8 +740,7 @@
                                     </div>
                                     <!--end::Item-->
                                     <!--begin::Item-->
-                                    <div
-                                        class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
+                                    <div class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
                                         <!--begin::Info-->
                                         <div class="d-flex flex-stack mb-3">
                                             <!--begin::Wrapper-->
@@ -755,15 +763,12 @@
                                                 <!--begin::Menu-->
                                                 <button
                                                     class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
+                                                    data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
                                                     data-kt-menu-overflow="true">
 
                                                     <i class="ki-duotone ki-dots-square fs-1"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span><span
-                                                            class="path3"></span><span
-                                                            class="path4"></span></i>
+                                                            class="path1"></span><span class="path2"></span><span
+                                                            class="path3"></span><span class="path4"></span></i>
                                                 </button>
 
                                                 <!--begin::Menu 2-->
@@ -771,8 +776,7 @@
                                                     data-kt-menu="true">
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
-                                                        <div
-                                                            class="menu-content fs-6 text-dark fw-bold px-3 py-4">
+                                                        <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">
                                                             Quick Actions</div>
                                                     </div>
                                                     <!--end::Menu item-->
@@ -798,8 +802,7 @@
                                                     <!--end::Menu item-->
 
                                                     <!--begin::Menu item-->
-                                                    <div class="menu-item px-3"
-                                                        data-kt-menu-trigger="hover"
+                                                    <div class="menu-item px-3" data-kt-menu-trigger="hover"
                                                         data-kt-menu-placement="right-start">
                                                         <!--begin::Menu item-->
                                                         <a href="#" class="menu-link px-3">
@@ -809,12 +812,10 @@
                                                         <!--end::Menu item-->
 
                                                         <!--begin::Menu sub-->
-                                                        <div
-                                                            class="menu-sub menu-sub-dropdown w-175px py-4">
+                                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Admin Group
                                                                 </a>
                                                             </div>
@@ -822,8 +823,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Staff Group
                                                                 </a>
                                                             </div>
@@ -831,8 +831,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Member Group
                                                                 </a>
                                                             </div>
@@ -857,8 +856,7 @@
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <div class="menu-content px-3 py-3">
-                                                            <a class="btn btn-primary  btn-sm px-4"
-                                                                href="#">
+                                                            <a class="btn btn-primary  btn-sm px-4" href="#">
                                                                 Generate Reports
                                                             </a>
                                                         </div>
@@ -891,8 +889,7 @@
                                     </div>
                                     <!--end::Item-->
                                     <!--begin::Item-->
-                                    <div
-                                        class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
+                                    <div class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
                                         <!--begin::Info-->
                                         <div class="d-flex flex-stack mb-3">
                                             <!--begin::Wrapper-->
@@ -915,15 +912,12 @@
                                                 <!--begin::Menu-->
                                                 <button
                                                     class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
+                                                    data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
                                                     data-kt-menu-overflow="true">
 
                                                     <i class="ki-duotone ki-dots-square fs-1"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span><span
-                                                            class="path3"></span><span
-                                                            class="path4"></span></i>
+                                                            class="path1"></span><span class="path2"></span><span
+                                                            class="path3"></span><span class="path4"></span></i>
                                                 </button>
 
                                                 <!--begin::Menu 2-->
@@ -931,8 +925,7 @@
                                                     data-kt-menu="true">
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
-                                                        <div
-                                                            class="menu-content fs-6 text-dark fw-bold px-3 py-4">
+                                                        <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">
                                                             Quick Actions</div>
                                                     </div>
                                                     <!--end::Menu item-->
@@ -958,8 +951,7 @@
                                                     <!--end::Menu item-->
 
                                                     <!--begin::Menu item-->
-                                                    <div class="menu-item px-3"
-                                                        data-kt-menu-trigger="hover"
+                                                    <div class="menu-item px-3" data-kt-menu-trigger="hover"
                                                         data-kt-menu-placement="right-start">
                                                         <!--begin::Menu item-->
                                                         <a href="#" class="menu-link px-3">
@@ -969,12 +961,10 @@
                                                         <!--end::Menu item-->
 
                                                         <!--begin::Menu sub-->
-                                                        <div
-                                                            class="menu-sub menu-sub-dropdown w-175px py-4">
+                                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Admin Group
                                                                 </a>
                                                             </div>
@@ -982,8 +972,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Staff Group
                                                                 </a>
                                                             </div>
@@ -991,8 +980,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Member Group
                                                                 </a>
                                                             </div>
@@ -1017,8 +1005,7 @@
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <div class="menu-content px-3 py-3">
-                                                            <a class="btn btn-primary  btn-sm px-4"
-                                                                href="#">
+                                                            <a class="btn btn-primary  btn-sm px-4" href="#">
                                                                 Generate Reports
                                                             </a>
                                                         </div>
@@ -1051,8 +1038,7 @@
                                     </div>
                                     <!--end::Item-->
                                     <!--begin::Item-->
-                                    <div
-                                        class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
+                                    <div class="border border-dashed border-gray-300 rounded px-7 py-3 mb-6">
                                         <!--begin::Info-->
                                         <div class="d-flex flex-stack mb-3">
                                             <!--begin::Wrapper-->
@@ -1074,15 +1060,12 @@
                                                 <!--begin::Menu-->
                                                 <button
                                                     class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
+                                                    data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
                                                     data-kt-menu-overflow="true">
 
                                                     <i class="ki-duotone ki-dots-square fs-1"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span><span
-                                                            class="path3"></span><span
-                                                            class="path4"></span></i>
+                                                            class="path1"></span><span class="path2"></span><span
+                                                            class="path3"></span><span class="path4"></span></i>
                                                 </button>
 
                                                 <!--begin::Menu 2-->
@@ -1090,8 +1073,7 @@
                                                     data-kt-menu="true">
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
-                                                        <div
-                                                            class="menu-content fs-6 text-dark fw-bold px-3 py-4">
+                                                        <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">
                                                             Quick Actions</div>
                                                     </div>
                                                     <!--end::Menu item-->
@@ -1117,8 +1099,7 @@
                                                     <!--end::Menu item-->
 
                                                     <!--begin::Menu item-->
-                                                    <div class="menu-item px-3"
-                                                        data-kt-menu-trigger="hover"
+                                                    <div class="menu-item px-3" data-kt-menu-trigger="hover"
                                                         data-kt-menu-placement="right-start">
                                                         <!--begin::Menu item-->
                                                         <a href="#" class="menu-link px-3">
@@ -1128,12 +1109,10 @@
                                                         <!--end::Menu item-->
 
                                                         <!--begin::Menu sub-->
-                                                        <div
-                                                            class="menu-sub menu-sub-dropdown w-175px py-4">
+                                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Admin Group
                                                                 </a>
                                                             </div>
@@ -1141,8 +1120,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Staff Group
                                                                 </a>
                                                             </div>
@@ -1150,8 +1128,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Member Group
                                                                 </a>
                                                             </div>
@@ -1176,8 +1153,7 @@
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <div class="menu-content px-3 py-3">
-                                                            <a class="btn btn-primary  btn-sm px-4"
-                                                                href="#">
+                                                            <a class="btn btn-primary  btn-sm px-4" href="#">
                                                                 Generate Reports
                                                             </a>
                                                         </div>
@@ -1210,8 +1186,7 @@
                                     </div>
                                     <!--end::Item-->
                                     <!--begin::Item-->
-                                    <div
-                                        class="border border-dashed border-gray-300 rounded px-7 py-3 ">
+                                    <div class="border border-dashed border-gray-300 rounded px-7 py-3 ">
                                         <!--begin::Info-->
                                         <div class="d-flex flex-stack mb-3">
                                             <!--begin::Wrapper-->
@@ -1234,15 +1209,12 @@
                                                 <!--begin::Menu-->
                                                 <button
                                                     class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
+                                                    data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end"
                                                     data-kt-menu-overflow="true">
 
                                                     <i class="ki-duotone ki-dots-square fs-1"><span
-                                                            class="path1"></span><span
-                                                            class="path2"></span><span
-                                                            class="path3"></span><span
-                                                            class="path4"></span></i>
+                                                            class="path1"></span><span class="path2"></span><span
+                                                            class="path3"></span><span class="path4"></span></i>
                                                 </button>
 
                                                 <!--begin::Menu 2-->
@@ -1250,8 +1222,7 @@
                                                     data-kt-menu="true">
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
-                                                        <div
-                                                            class="menu-content fs-6 text-dark fw-bold px-3 py-4">
+                                                        <div class="menu-content fs-6 text-dark fw-bold px-3 py-4">
                                                             Quick Actions</div>
                                                     </div>
                                                     <!--end::Menu item-->
@@ -1277,8 +1248,7 @@
                                                     <!--end::Menu item-->
 
                                                     <!--begin::Menu item-->
-                                                    <div class="menu-item px-3"
-                                                        data-kt-menu-trigger="hover"
+                                                    <div class="menu-item px-3" data-kt-menu-trigger="hover"
                                                         data-kt-menu-placement="right-start">
                                                         <!--begin::Menu item-->
                                                         <a href="#" class="menu-link px-3">
@@ -1288,12 +1258,10 @@
                                                         <!--end::Menu item-->
 
                                                         <!--begin::Menu sub-->
-                                                        <div
-                                                            class="menu-sub menu-sub-dropdown w-175px py-4">
+                                                        <div class="menu-sub menu-sub-dropdown w-175px py-4">
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Admin Group
                                                                 </a>
                                                             </div>
@@ -1301,8 +1269,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Staff Group
                                                                 </a>
                                                             </div>
@@ -1310,8 +1277,7 @@
 
                                                             <!--begin::Menu item-->
                                                             <div class="menu-item px-3">
-                                                                <a href="#"
-                                                                    class="menu-link px-3">
+                                                                <a href="#" class="menu-link px-3">
                                                                     Member Group
                                                                 </a>
                                                             </div>
@@ -1336,8 +1302,7 @@
                                                     <!--begin::Menu item-->
                                                     <div class="menu-item px-3">
                                                         <div class="menu-content px-3 py-3">
-                                                            <a class="btn btn-primary  btn-sm px-4"
-                                                                href="#">
+                                                            <a class="btn btn-primary  btn-sm px-4" href="#">
                                                                 Generate Reports
                                                             </a>
                                                         </div>
@@ -1409,8 +1374,7 @@
                                             <select
                                                 class="form-select form-select-transparent text-dark fs-7 lh-1 fw-bold py-0 ps-3 w-auto"
                                                 data-control="select2" data-hide-search="true"
-                                                data-dropdown-css-class="w-150px"
-                                                data-placeholder="Select an option">
+                                                data-dropdown-css-class="w-150px" data-placeholder="Select an option">
                                                 <option></option>
                                                 <option value="Show All" selected>Show All</option>
                                                 <option value="a">Category A</option>
@@ -1430,8 +1394,7 @@
                                             <select
                                                 class="form-select form-select-transparent text-dark fs-7 lh-1 fw-bold py-0 ps-3 w-auto"
                                                 data-control="select2" data-hide-search="true"
-                                                data-dropdown-css-class="w-150px"
-                                                data-placeholder="Select an option"
+                                                data-dropdown-css-class="w-150px" data-placeholder="Select an option"
                                                 data-kt-table-widget-5="filter_status">
                                                 <option></option>
                                                 <option value="Show All" selected>Show All</option>
@@ -1457,13 +1420,11 @@
                             <!--begin::Card body-->
                             <div class="card-body">
                                 <!--begin::Table-->
-                                <table class="table align-middle table-row-dashed fs-6 gy-3"
-                                    id="kt_table_widget_5_table">
+                                <table class="table align-middle table-row-dashed fs-6 gy-3" id="kt_table_widget_5_table">
                                     <!--begin::Table head-->
                                     <thead>
                                         <!--begin::Table row-->
-                                        <tr
-                                            class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                                        <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                                             <th class="min-w-150px">Item</th>
                                             <th class="text-end pe-3 min-w-100px">Product ID</th>
                                             <th class="text-end pe-3 min-w-150px">Date Added</th>
@@ -1503,8 +1464,7 @@
 
                                             <!--begin::Status-->
                                             <td class="text-end">
-                                                <span
-                                                    class="badge py-3 px-4 fs-7 badge-light-primary">In
+                                                <span class="badge py-3 px-4 fs-7 badge-light-primary">In
                                                     Stock</span>
                                             </td>
                                             <!--end::Status-->
@@ -1541,8 +1501,7 @@
 
                                             <!--begin::Status-->
                                             <td class="text-end">
-                                                <span
-                                                    class="badge py-3 px-4 fs-7 badge-light-danger">Out
+                                                <span class="badge py-3 px-4 fs-7 badge-light-danger">Out
                                                     of Stock</span>
                                             </td>
                                             <!--end::Status-->
@@ -1579,8 +1538,7 @@
 
                                             <!--begin::Status-->
                                             <td class="text-end">
-                                                <span
-                                                    class="badge py-3 px-4 fs-7 badge-light-primary">In
+                                                <span class="badge py-3 px-4 fs-7 badge-light-primary">In
                                                     Stock</span>
                                             </td>
                                             <!--end::Status-->
@@ -1617,8 +1575,7 @@
 
                                             <!--begin::Status-->
                                             <td class="text-end">
-                                                <span
-                                                    class="badge py-3 px-4 fs-7 badge-light-danger">Out
+                                                <span class="badge py-3 px-4 fs-7 badge-light-danger">Out
                                                     of Stock</span>
                                             </td>
                                             <!--end::Status-->
@@ -1655,8 +1612,7 @@
 
                                             <!--begin::Status-->
                                             <td class="text-end">
-                                                <span
-                                                    class="badge py-3 px-4 fs-7 badge-light-primary">In
+                                                <span class="badge py-3 px-4 fs-7 badge-light-primary">In
                                                     Stock</span>
                                             </td>
                                             <!--end::Status-->
@@ -1693,8 +1649,7 @@
 
                                             <!--begin::Status-->
                                             <td class="text-end">
-                                                <span
-                                                    class="badge py-3 px-4 fs-7 badge-light-warning">Low
+                                                <span class="badge py-3 px-4 fs-7 badge-light-warning">Low
                                                     Stock</span>
                                             </td>
                                             <!--end::Status-->
@@ -1731,8 +1686,7 @@
 
                                             <!--begin::Status-->
                                             <td class="text-end">
-                                                <span
-                                                    class="badge py-3 px-4 fs-7 badge-light-primary">In
+                                                <span class="badge py-3 px-4 fs-7 badge-light-primary">In
                                                     Stock</span>
                                             </td>
                                             <!--end::Status-->
@@ -1753,7 +1707,7 @@
                         <!--end::Table Widget 5-->
                     </div>
                     <!--end::Col-->
-                </div>
+                </div> --}}
                 <!--end::Row-->
             </div>
             <!--end::Content-->

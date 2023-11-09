@@ -12,373 +12,11 @@
 
 
                 <!--begin::Navbar-->
-                <div class="card mb-5 mb-xl-10">
-                    <div class="card-body pt-9 pb-0">
-                        <!--begin::Details-->
-                        <div class="d-flex flex-wrap flex-sm-nowrap mb-3">
-                            <!--begin: Pic-->
-                            <div class="me-7 mb-4">
-                                <div class="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
-                                    <img src="/axel-html-pro/assets/media/avatars/300-3.jpg" alt="image" />
-                                    <div
-                                        class="position-absolute translate-middle bottom-0 start-100 mb-6 bg-success rounded-circle border border-4 border-body h-20px w-20px">
-                                    </div>
-                                </div>
-                            </div>
-                            <!--end::Pic-->
-
-                            <!--begin::Info-->
-                            <div class="flex-grow-1">
-                                <!--begin::Title-->
-                                <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
-                                    <!--begin::User-->
-                                    <div class="d-flex flex-column">
-                                        <!--begin::Name-->
-                                        <div class="d-flex align-items-center mb-2">
-                                            <a href="#"
-                                                class="text-gray-900 text-hover-primary fs-2 fw-bold me-1">Johnson</a>
-                                            <a href="#"><i class="ki-duotone ki-verify fs-1 text-primary"><span
-                                                        class="path1"></span><span class="path2"></span></i></a>
-
-                                            <a href="#"
-                                                class="btn btn-sm btn-light-success fw-bold ms-2 fs-8 py-1 px-3"
-                                                data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan"
-                                                data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Upgrade to
-                                                Pro</a>
-                                        </div>
-                                        <!--end::Name-->
-
-                                        <!--begin::Info-->
-                                        <div class="d-flex flex-wrap fw-semibold fs-6 mb-4 pe-2">
-                                            <a href="#"
-                                                class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2">
-                                                <i class="ki-duotone ki-profile-circle fs-4 me-1"><span
-                                                        class="path1"></span><span class="path2"></span><span
-                                                        class="path3"></span></i> React Developer
-                                            </a>
-                                            <a href="#"
-                                                class="d-flex align-items-center text-gray-400 text-hover-primary me-5 mb-2">
-                                                <i class="ki-duotone ki-geolocation fs-4 me-1"><span
-                                                        class="path1"></span><span class="path2"></span></i> SF, Bay Area
-                                            </a>
-                                            <a href="#"
-                                                class="d-flex align-items-center text-gray-400 text-hover-primary mb-2">
-                                                <i class="ki-duotone ki-sms fs-4 me-1"><span class="path1"></span><span
-                                                        class="path2"></span></i> johnson@kt.com
-                                            </a>
-                                        </div>
-                                        <!--end::Info-->
-                                    </div>
-                                    <!--end::User-->
-
-                                    <!--begin::Actions-->
-                                    <div class="d-flex my-4">
-                                        <a href="#" class="btn btn-sm btn-light me-2" id="kt_user_follow_button">
-                                            <i class="ki-duotone ki-check fs-2 d-none"></i>
-                                            <!--begin::Indicator label-->
-                                            <span class="indicator-label">
-                                                Follow</span>
-                                            <!--end::Indicator label-->
-
-                                            <!--begin::Indicator progress-->
-                                            <span class="indicator-progress">
-                                                Please wait... <span
-                                                    class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                                            </span>
-                                            <!--end::Indicator progress--> </a>
-
-                                        <a href="#" class="btn btn-sm btn-primary me-2" data-bs-toggle="modal"
-                                            data-bs-target="#kt_modal_offer_a_deal">Hire Me</a>
-
-                                        <!--begin::Menu-->
-                                        <div class="me-0">
-                                            <button class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
-                                                data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                                <i class="bi bi-three-dots fs-3"></i>
-                                            </button>
-
-                                            <!--begin::Menu 3-->
-                                            <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-3"
-                                                data-kt-menu="true">
-                                                <!--begin::Heading-->
-                                                <div class="menu-item px-3">
-                                                    <div class="menu-content text-muted pb-2 px-3 fs-7 text-uppercase">
-                                                        Payments
-                                                    </div>
-                                                </div>
-                                                <!--end::Heading-->
-
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <a href="#" class="menu-link px-3">
-                                                        Create Invoice
-                                                    </a>
-                                                </div>
-                                                <!--end::Menu item-->
-
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <a href="#" class="menu-link flex-stack px-3">
-                                                        Create Payment
-
-                                                        <span class="ms-2" data-bs-toggle="tooltip"
-                                                            title="Specify a target name for future usage and reference">
-                                                            <i class="ki-duotone ki-information fs-6"><span
-                                                                    class="path1"></span><span class="path2"></span><span
-                                                                    class="path3"></span></i> </span>
-                                                    </a>
-                                                </div>
-                                                <!--end::Menu item-->
-
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <a href="#" class="menu-link px-3">
-                                                        Generate Bill
-                                                    </a>
-                                                </div>
-                                                <!--end::Menu item-->
-
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3" data-kt-menu-trigger="hover"
-                                                    data-kt-menu-placement="right-end">
-                                                    <a href="#" class="menu-link px-3">
-                                                        <span class="menu-title">Subscription</span>
-                                                        <span class="menu-arrow"></span>
-                                                    </a>
-
-                                                    <!--begin::Menu sub-->
-                                                    <div class="menu-sub menu-sub-dropdown w-175px py-4">
-                                                        <!--begin::Menu item-->
-                                                        <div class="menu-item px-3">
-                                                            <a href="#" class="menu-link px-3">
-                                                                Plans
-                                                            </a>
-                                                        </div>
-                                                        <!--end::Menu item-->
-
-                                                        <!--begin::Menu item-->
-                                                        <div class="menu-item px-3">
-                                                            <a href="#" class="menu-link px-3">
-                                                                Billing
-                                                            </a>
-                                                        </div>
-                                                        <!--end::Menu item-->
-
-                                                        <!--begin::Menu item-->
-                                                        <div class="menu-item px-3">
-                                                            <a href="#" class="menu-link px-3">
-                                                                Statements
-                                                            </a>
-                                                        </div>
-                                                        <!--end::Menu item-->
-
-                                                        <!--begin::Menu separator-->
-                                                        <div class="separator my-2"></div>
-                                                        <!--end::Menu separator-->
-
-                                                        <!--begin::Menu item-->
-                                                        <div class="menu-item px-3">
-                                                            <div class="menu-content px-3">
-                                                                <!--begin::Switch-->
-                                                                <label
-                                                                    class="form-check form-switch form-check-custom form-check-solid">
-                                                                    <!--begin::Input-->
-                                                                    <input class="form-check-input w-30px h-20px"
-                                                                        type="checkbox" value="1" checked="checked"
-                                                                        name="notifications" />
-                                                                    <!--end::Input-->
-
-                                                                    <!--end::Label-->
-                                                                    <span class="form-check-label text-muted fs-6">
-                                                                        Recuring
-                                                                    </span>
-                                                                    <!--end::Label-->
-                                                                </label>
-                                                                <!--end::Switch-->
-                                                            </div>
-                                                        </div>
-                                                        <!--end::Menu item-->
-                                                    </div>
-                                                    <!--end::Menu sub-->
-                                                </div>
-                                                <!--end::Menu item-->
-
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3 my-1">
-                                                    <a href="#" class="menu-link px-3">
-                                                        Settings
-                                                    </a>
-                                                </div>
-                                                <!--end::Menu item-->
-                                            </div>
-                                            <!--end::Menu 3-->
-                                        </div>
-                                        <!--end::Menu-->
-                                    </div>
-                                    <!--end::Actions-->
-                                </div>
-                                <!--end::Title-->
-
-                                <!--begin::Stats-->
-                                <div class="d-flex flex-wrap flex-stack">
-                                    <!--begin::Wrapper-->
-                                    <div class="d-flex flex-column flex-grow-1 pe-8">
-                                        <!--begin::Stats-->
-                                        <div class="d-flex flex-wrap">
-                                            <!--begin::Stat-->
-                                            <div
-                                                class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                                <!--begin::Number-->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="ki-duotone ki-arrow-up fs-2 text-success me-2"><span
-                                                            class="path1"></span><span class="path2"></span></i>
-                                                    <div class="fs-2 fw-bold" data-kt-countup="true"
-                                                        data-kt-countup-value="4500" data-kt-countup-prefix="$">0</div>
-                                                </div>
-                                                <!--end::Number-->
-
-                                                <!--begin::Label-->
-                                                <div class="fw-semibold fs-6 text-gray-400">Earnings
-                                                </div>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Stat-->
-
-                                            <!--begin::Stat-->
-                                            <div
-                                                class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                                <!--begin::Number-->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="ki-duotone ki-arrow-down fs-2 text-danger me-2"><span
-                                                            class="path1"></span><span class="path2"></span></i>
-                                                    <div class="fs-2 fw-bold" data-kt-countup="true"
-                                                        data-kt-countup-value="75">0</div>
-                                                </div>
-                                                <!--end::Number-->
-
-                                                <!--begin::Label-->
-                                                <div class="fw-semibold fs-6 text-gray-400">Projects
-                                                </div>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Stat-->
-
-                                            <!--begin::Stat-->
-                                            <div
-                                                class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                                <!--begin::Number-->
-                                                <div class="d-flex align-items-center">
-                                                    <i class="ki-duotone ki-arrow-up fs-2 text-success me-2"><span
-                                                            class="path1"></span><span class="path2"></span></i>
-                                                    <div class="fs-2 fw-bold" data-kt-countup="true"
-                                                        data-kt-countup-value="60" data-kt-countup-prefix="%">0</div>
-                                                </div>
-                                                <!--end::Number-->
-
-                                                <!--begin::Label-->
-                                                <div class="fw-semibold fs-6 text-gray-400">Success Rate
-                                                </div>
-                                                <!--end::Label-->
-                                            </div>
-                                            <!--end::Stat-->
-                                        </div>
-                                        <!--end::Stats-->
-                                    </div>
-                                    <!--end::Wrapper-->
-
-                                    <!--begin::Progress-->
-                                    <div class="d-flex align-items-center w-200px w-sm-300px flex-column mt-3">
-                                        <div class="d-flex justify-content-between w-100 mt-auto mb-2">
-                                            <span class="fw-semibold fs-6 text-gray-400">Profile
-                                                Compleation</span>
-                                            <span class="fw-bold fs-6">50%</span>
-                                        </div>
-
-                                        <div class="h-5px mx-3 w-100 bg-light mb-3">
-                                            <div class="bg-success rounded h-5px" role="progressbar" style="width: 50%;"
-                                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <!--end::Progress-->
-                                </div>
-                                <!--end::Stats-->
-                            </div>
-                            <!--end::Info-->
-                        </div>
-                        <!--end::Details-->
-
-                        <!--begin::Navs-->
-                        <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
-                            <!--begin::Nav item-->
-                            <li class="nav-item mt-2">
-                                <a class="nav-link text-active-primary ms-0 me-10 py-5 "
-                                    href="/axel-html-pro/account/overview.html">
-                                    Overview </a>
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item mt-2">
-                                <a class="nav-link text-active-primary ms-0 me-10 py-5 "
-                                    href="/axel-html-pro/account/settings.html">
-                                    Settings </a>
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item mt-2">
-                                <a class="nav-link text-active-primary ms-0 me-10 py-5 "
-                                    href="/axel-html-pro/account/security.html">
-                                    Security </a>
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item mt-2">
-                                <a class="nav-link text-active-primary ms-0 me-10 py-5 "
-                                    href="/axel-html-pro/account/activity.html">
-                                    Activity </a>
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item mt-2">
-                                <a class="nav-link text-active-primary ms-0 me-10 py-5 active"
-                                    href="/axel-html-pro/account/billing.html">
-                                    Billing </a>
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item mt-2">
-                                <a class="nav-link text-active-primary ms-0 me-10 py-5 "
-                                    href="/axel-html-pro/account/statements.html">
-                                    Statements </a>
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item mt-2">
-                                <a class="nav-link text-active-primary ms-0 me-10 py-5 "
-                                    href="/axel-html-pro/account/referrals.html">
-                                    Referrals </a>
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item mt-2">
-                                <a class="nav-link text-active-primary ms-0 me-10 py-5 "
-                                    href="/axel-html-pro/account/api-keys.html">
-                                    API Keys </a>
-                            </li>
-                            <!--end::Nav item-->
-                            <!--begin::Nav item-->
-                            <li class="nav-item mt-2">
-                                <a class="nav-link text-active-primary ms-0 me-10 py-5 "
-                                    href="/axel-html-pro/account/logs.html">
-                                    Logs </a>
-                            </li>
-                            <!--end::Nav item-->
-                        </ul>
-                        <!--begin::Navs-->
-                    </div>
-                </div>
+                @include('BudgetBuddy.pages.account.inc.navbar')
                 <!--end::Navbar-->
+
                 <!--begin::Billing Summary-->
-                <div class="card  mb-5 mb-xl-10">
+                {{-- <div class="card  mb-5 mb-xl-10">
                     <!--begin::Card body-->
                     <div class="card-body">
 
@@ -468,7 +106,7 @@
                         <!--end::Row-->
                     </div>
                     <!--end::Card body-->
-                </div>
+                </div> --}}
                 <!--end::Billing Summary-->
 
                 <!--begin::Payment methods-->
@@ -477,7 +115,7 @@
                     <div class="card-header card-header-stretch pb-0">
                         <!--begin::Title-->
                         <div class="card-title">
-                            <h3 class="m-0">Payment Methods</h3>
+                            <h3 class="m-0">Danh Mục Thanh toán</h3>
                         </div>
                         <!--end::Title-->
 
@@ -489,7 +127,7 @@
                                 <li class="nav-item" role="presentation">
                                     <a id="kt_billing_creditcard_tab" class="nav-link fs-5 fw-bold me-5 active"
                                         data-bs-toggle="tab" role="tab" href="#kt_billing_creditcard">
-                                        Credit / Debit Card
+                                        Cá nhân
                                     </a>
                                 </li>
                                 <!--end::Tab item-->
@@ -498,7 +136,7 @@
                                 <li class="nav-item" role="presentation">
                                     <a id="kt_billing_paypal_tab" class="nav-link fs-5 fw-bold" data-bs-toggle="tab"
                                         role="tab" href="#kt_billing_paypal">
-                                        Paypal
+                                        Chung
                                     </a>
                                 </li>
                                 <!--end::Tab item-->
@@ -512,9 +150,9 @@
                     <!--begin::Tab content-->
                     <div id="kt_billing_payment_tab_content" class="card-body tab-content">
                         <!--begin::Tab panel-->
-                        <div id="kt_billing_creditcard" class="tab-pane fade show active" role="tabpanel"">
+                        <div id="kt_billing_creditcard" class="tab-pane fade show active" role="tabpanel">
                             <!--begin::Title-->
-                            <h3 class=" mb-5">My Cards</h3>
+                            {{-- <h3 class=" mb-5">Danh mục</h3> --}}
                             <!--end::Title-->
 
                             <!--begin::Row-->
@@ -527,23 +165,22 @@
                                         <div class="d-flex flex-column py-2">
                                             <!--begin::Owner-->
                                             <div class="d-flex align-items-center fs-4 fw-bold mb-5">
-                                                Marcus Morris
-                                                <span class="badge badge-light-success fs-7 ms-2">Primary</span>
+                                                Thức uống
                                             </div>
                                             <!--end::Owner-->
 
                                             <!--begin::Wrapper-->
                                             <div class="d-flex align-items-center">
                                                 <!--begin::Icon-->
-                                                <img src="/axel-html-pro/assets/media/svg/card-logos/visa.svg"
+                                                <img src="{{ asset('Budgetbuddy/media/svg/card-logos/american-express.svg') }}"
                                                     alt="" class="me-4" />
                                                 <!--end::Icon-->
 
                                                 <!--begin::Details-->
                                                 <div>
-                                                    <div class="fs-4 fw-bold">Visa **** 1679</div>
-                                                    <div class="fs-6 fw-semibold text-gray-400">Card
-                                                        expires at 09/24</div>
+                                                    <div class="fs-4 fw-bold">Số lượng: 12</div>
+                                                    <div class="fs-6 fw-semibold text-gray-400">Ngày khởi tạo danh mục 24/09
+                                                    </div>
                                                 </div>
                                                 <!--end::Details-->
                                             </div>
@@ -554,11 +191,14 @@
                                         <!--begin::Actions-->
                                         <div class="d-flex align-items-center py-2">
                                             <button class="btn btn-sm btn-light btn-active-light-primary me-3"
+                                                data-bs-toggle="modal" data-bs-target="#kt_modal_detail_cat">Chi
+                                                tiết</button>
+                                            <button class="btn btn-sm btn-light btn-active-light-primary"
                                                 data-kt-billing-action="card-delete">
 
                                                 <!--begin::Indicator label-->
                                                 <span class="indicator-label">
-                                                    Delete</span>
+                                                    Xóa</span>
                                                 <!--end::Indicator label-->
 
                                                 <!--begin::Indicator progress-->
@@ -568,8 +208,6 @@
                                                 </span>
                                                 <!--end::Indicator progress-->
                                             </button>
-                                            <button class="btn btn-sm btn-light btn-active-light-primary"
-                                                data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">Edit</button>
                                         </div>
                                         <!--end::Actions-->
                                     </div>
@@ -585,22 +223,22 @@
                                         <div class="d-flex flex-column py-2">
                                             <!--begin::Owner-->
                                             <div class="d-flex align-items-center fs-4 fw-bold mb-5">
-                                                Jacob Holder
+                                                Kẹo
                                             </div>
                                             <!--end::Owner-->
 
                                             <!--begin::Wrapper-->
                                             <div class="d-flex align-items-center">
                                                 <!--begin::Icon-->
-                                                <img src="/axel-html-pro/assets/media/svg/card-logos/american-express.svg"
+                                                <img src="{{ asset('Budgetbuddy/media/svg/card-logos/mastercard.svg') }}"
                                                     alt="" class="me-4" />
                                                 <!--end::Icon-->
 
                                                 <!--begin::Details-->
                                                 <div>
-                                                    <div class="fs-4 fw-bold">Mastercard **** 2040</div>
-                                                    <div class="fs-6 fw-semibold text-gray-400">Card
-                                                        expires at 10/22</div>
+                                                    <div class="fs-4 fw-bold">Số lượng: 12</div>
+                                                    <div class="fs-6 fw-semibold text-gray-400">Ngày khởi tạo danh mục 24/10
+                                                    </div>
                                                 </div>
                                                 <!--end::Details-->
                                             </div>
@@ -615,7 +253,7 @@
 
                                                 <!--begin::Indicator label-->
                                                 <span class="indicator-label">
-                                                    Delete</span>
+                                                    Xóa</span>
                                                 <!--end::Indicator label-->
 
                                                 <!--begin::Indicator progress-->
@@ -626,64 +264,7 @@
                                                 <!--end::Indicator progress-->
                                             </button>
                                             <button class="btn btn-sm btn-light btn-active-light-primary"
-                                                data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">Edit</button>
-                                        </div>
-                                        <!--end::Actions-->
-                                    </div>
-                                    <!--end::Card-->
-                                </div>
-                                <!--end::Col-->
-
-                                <!--begin::Col-->
-                                <div class="col-xl-6" data-kt-billing-element="card">
-                                    <!--begin::Card-->
-                                    <div class="card card-dashed h-xl-100 flex-row flex-stack flex-wrap p-6">
-                                        <!--begin::Info-->
-                                        <div class="d-flex flex-column py-2">
-                                            <!--begin::Owner-->
-                                            <div class="d-flex align-items-center fs-4 fw-bold mb-5">
-                                                Jhon Larson
-                                            </div>
-                                            <!--end::Owner-->
-
-                                            <!--begin::Wrapper-->
-                                            <div class="d-flex align-items-center">
-                                                <!--begin::Icon-->
-                                                <img src="/axel-html-pro/assets/media/svg/card-logos/mastercard.svg"
-                                                    alt="" class="me-4" />
-                                                <!--end::Icon-->
-
-                                                <!--begin::Details-->
-                                                <div>
-                                                    <div class="fs-4 fw-bold">Mastercard **** 1290</div>
-                                                    <div class="fs-6 fw-semibold text-gray-400">Card
-                                                        expires at 03/23</div>
-                                                </div>
-                                                <!--end::Details-->
-                                            </div>
-                                            <!--end::Wrapper-->
-                                        </div>
-                                        <!--end::Info-->
-
-                                        <!--begin::Actions-->
-                                        <div class="d-flex align-items-center py-2">
-                                            <button class="btn btn-sm btn-light btn-active-light-primary me-3"
-                                                data-kt-billing-action="card-delete">
-
-                                                <!--begin::Indicator label-->
-                                                <span class="indicator-label">
-                                                    Delete</span>
-                                                <!--end::Indicator label-->
-
-                                                <!--begin::Indicator progress-->
-                                                <span class="indicator-progress">
-                                                    Please wait... <span
-                                                        class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                                                </span>
-                                                <!--end::Indicator progress-->
-                                            </button>
-                                            <button class="btn btn-sm btn-light btn-active-light-primary"
-                                                data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">Edit</button>
+                                                data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">Sửa</button>
                                         </div>
                                         <!--end::Actions-->
                                     </div>
@@ -702,11 +283,11 @@
                                         <div class="d-flex flex-stack flex-grow-1 flex-wrap flex-md-nowrap">
                                             <!--begin::Content-->
                                             <div class="mb-3 mb-md-0 fw-semibold">
-                                                <h4 class="text-gray-900 fw-bold">Important Note!</h4>
+                                                <h4 class="text-gray-900 fw-bold">Tạo danh mục!</h4>
 
-                                                <div class="fs-6 text-gray-700 pe-7">Please carefully
-                                                    read <a href="#" class="fw-bold me-1">Product
-                                                        Terms</a> adding <br /> your new payment card
+                                                <div class="fs-6 text-gray-700 pe-7">Phân chia sản phẩm theo từng
+                                                    danh mục<br /> Hỗ trợ quản lý thanh toán và quá trình tạo đơn hàng nhanh
+                                                    chóng
                                                 </div>
                                             </div>
                                             <!--end::Content-->
@@ -714,7 +295,7 @@
                                             <!--begin::Action-->
                                             <a href="#" class="btn btn-primary px-6 align-self-center text-nowrap"
                                                 data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">
-                                                Add Card </a>
+                                                Thêm </a>
                                             <!--end::Action-->
                                         </div>
                                         <!--end::Wrapper-->
@@ -724,6 +305,146 @@
                                 <!--end::Col-->
                             </div>
                             <!--end::Row-->
+
+                            <!--begin::Modal - New Card-->
+                            <div class="modal fade" id="kt_modal_detail_cat" tabindex="-1" aria-hidden="true">
+                                <!--begin::Modal dialog-->
+                                <div class="modal-dialog modal-dialog-centered mw-950px">
+                                    <!--begin::Modal content-->
+                                    <div class="modal-content">
+                                        <!--begin::Modal header-->
+                                        <div class="modal-header">
+                                            <!--begin::Modal title-->
+                                            <h2>Chi tiết (Tên Danh Mục)</h2>
+                                            <!--end::Modal title-->
+
+                                            <!--begin::Close-->
+                                            <div class="btn btn-sm btn-icon btn-active-color-primary"
+                                                data-bs-dismiss="modal">
+                                                <i class="ki-duotone ki-cross fs-1"><span class="path1"></span><span
+                                                        class="path2"></span></i>
+                                            </div>
+                                            <!--end::Close-->
+                                        </div>
+                                        <!--end::Modal header-->
+
+                                        <!--begin::Modal body-->
+                                        <div class="modal-body scroll-y mx-1 mx-xl-15 my-7 p-0">
+                                            <!--begin::Form-->
+                                            <table id="kt_datatable_fixed_columns"
+                                                class="table table-striped table-row-bordered gy-5 gs-7">
+                                                <thead>
+                                                    <tr class="fw-semibold fs-6 text-gray-800">
+                                                        <th class="min-w-20px">STT</th>
+                                                        <th class="min-w-100px">Sản phẩm</th>
+                                                        <th class="min-w-100px">Số lượng</th>
+                                                        <th class="min-w-100px">Tổng cộng</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Tiger</td>
+                                                        <td>Nixon</td>
+                                                        <td>Edinburgh</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Tiger</td>
+                                                        <td>Nixon</td>
+                                                        <td>Edinburgh</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Tiger</td>
+                                                        <td>Nixon</td>
+                                                        <td>Edinburgh</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="row">
+                                                <div
+                                                    class="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                                                    <div class="dataTables_length"
+                                                        id="kt_datatable_zero_configuration_length"><label><select
+                                                                name="kt_datatable_zero_configuration_length"
+                                                                aria-controls="kt_datatable_zero_configuration"
+                                                                class="form-select form-select-sm form-select-solid">
+                                                                <option value="10">10</option>
+                                                                <option value="25">25</option>
+                                                                <option value="50">50</option>
+                                                                <option value="100">100</option>
+                                                            </select></label></div>
+                                                    <div class="dataTables_info" id="kt_datatable_zero_configuration_info"
+                                                        role="status" aria-live="polite">Showing 1 to 10 of 57 records
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                                                    <div class="dataTables_paginate paging_simple_numbers"
+                                                        id="kt_datatable_zero_configuration_paginate">
+                                                        <ul class="pagination">
+                                                            <li class="paginate_button page-item previous disabled"
+                                                                id="kt_datatable_zero_configuration_previous"><a
+                                                                    href="#"
+                                                                    aria-controls="kt_datatable_zero_configuration"
+                                                                    data-dt-idx="0" tabindex="0" class="page-link"><i
+                                                                        class="previous"></i></a></li>
+                                                            <li class="paginate_button page-item active"><a href="#"
+                                                                    aria-controls="kt_datatable_zero_configuration"
+                                                                    data-dt-idx="1" tabindex="0"
+                                                                    class="page-link">1</a></li>
+                                                            <li class="paginate_button page-item "><a href="#"
+                                                                    aria-controls="kt_datatable_zero_configuration"
+                                                                    data-dt-idx="2" tabindex="0"
+                                                                    class="page-link">2</a></li>
+                                                            <li class="paginate_button page-item "><a href="#"
+                                                                    aria-controls="kt_datatable_zero_configuration"
+                                                                    data-dt-idx="3" tabindex="0"
+                                                                    class="page-link">3</a></li>
+                                                            <li class="paginate_button page-item "><a href="#"
+                                                                    aria-controls="kt_datatable_zero_configuration"
+                                                                    data-dt-idx="4" tabindex="0"
+                                                                    class="page-link">4</a></li>
+                                                            <li class="paginate_button page-item "><a href="#"
+                                                                    aria-controls="kt_datatable_zero_configuration"
+                                                                    data-dt-idx="5" tabindex="0"
+                                                                    class="page-link">5</a></li>
+                                                            <li class="paginate_button page-item "><a href="#"
+                                                                    aria-controls="kt_datatable_zero_configuration"
+                                                                    data-dt-idx="6" tabindex="0"
+                                                                    class="page-link">6</a></li>
+                                                            <li class="paginate_button page-item next"
+                                                                id="kt_datatable_zero_configuration_next">
+                                                                <a href="#"
+                                                                    aria-controls="kt_datatable_zero_configuration"
+                                                                    data-dt-idx="7" tabindex="0" class="page-link"><i
+                                                                        class="next"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <script>
+                                                $("#kt_datatable_fixed_columns").DataTable({
+                                                    scrollY: "300px",
+                                                    scrollX: true,
+                                                    scrollCollapse: true,
+                                                    fixedColumns: {
+                                                        left: 2
+                                                    }
+                                                });
+                                            </script>
+                                            <!--end::Form-->
+                                        </div>
+                                        <!--end::Modal body-->
+                                    </div>
+                                    <!--end::Modal content-->
+                                </div>
+                                <!--end::Modal dialog-->
+                            </div>
+                            <!--end::Modal - New Card-->
+
                         </div>
                         <!--end::Tab panel-->
 
@@ -807,7 +528,7 @@
 
                                             <!--begin::Indicator label-->
                                             <span class="indicator-label">
-                                                Delete</span>
+                                                Xóa</span>
                                             <!--end::Indicator label-->
 
                                             <!--begin::Indicator progress-->
@@ -818,7 +539,7 @@
                                             <!--end::Indicator progress-->
                                         </button>
                                         <button class="btn btn-sm btn-light btn-active-light-primary"
-                                            data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">Edit</button>
+                                            data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">Sửa</button>
                                     </div>
                                     <!--end::Actions-->
                                 </div>
@@ -850,7 +571,7 @@
 
                                             <!--begin::Indicator label-->
                                             <span class="indicator-label">
-                                                Delete</span>
+                                                Xóa</span>
                                             <!--end::Indicator label-->
 
                                             <!--begin::Indicator progress-->
@@ -861,7 +582,7 @@
                                             <!--end::Indicator progress-->
                                         </button>
                                         <button class="btn btn-sm btn-light btn-active-light-primary"
-                                            data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">Edit</button>
+                                            data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">Sửa</button>
                                     </div>
                                     <!--end::Actions-->
                                 </div>
@@ -893,7 +614,7 @@
 
                                             <!--begin::Indicator label-->
                                             <span class="indicator-label">
-                                                Delete</span>
+                                                Xóa</span>
                                             <!--end::Indicator label-->
 
                                             <!--begin::Indicator progress-->
@@ -904,7 +625,7 @@
                                             <!--end::Indicator progress-->
                                         </button>
                                         <button class="btn btn-sm btn-light btn-active-light-primary"
-                                            data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">Edit</button>
+                                            data-bs-toggle="modal" data-bs-target="#kt_modal_new_address">Sửa</button>
                                     </div>
                                     <!--end::Actions-->
                                 </div>
@@ -966,7 +687,7 @@
                     <div class="card-header card-header-stretch border-bottom border-gray-200">
                         <!--begin::Title-->
                         <div class="card-title">
-                            <h3 class="fw-bold m-0">Billing History</h3>
+                            <h3 class="fw-bold m-0">Lịch sử Thanh toán</h3>
                         </div>
                         <!--end::Title-->
 
@@ -1342,5 +1063,212 @@
         <!--end::Content wrapper-->
 
     </div>
+
+    <!--begin::Modal - New Card-->
+    <div class="modal fade" id="kt_modal_new_card" tabindex="-1" aria-hidden="true">
+        <!--begin::Modal dialog-->
+        <div class="modal-dialog modal-dialog-centered mw-650px">
+            <!--begin::Modal content-->
+            <div class="modal-content">
+                <!--begin::Modal header-->
+                <div class="modal-header">
+                    <!--begin::Modal title-->
+                    <h2>Thêm danh mục</h2>
+                    <!--end::Modal title-->
+
+                    <!--begin::Close-->
+                    <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                        <i class="ki-duotone ki-cross fs-1"><span class="path1"></span><span class="path2"></span></i>
+                    </div>
+                    <!--end::Close-->
+                </div>
+                <!--end::Modal header-->
+
+                <!--begin::Modal body-->
+                <div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+                    <!--begin::Form-->
+                    <form id="kt_modal_new_card_form" class="form" action="#">
+                        <!--begin::Input group-->
+                        <div class="d-flex flex-column mb-7 fv-row">
+                            <!--begin::Label-->
+                            <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                                <span class="required">Tên danh mục</span>
+
+
+                                <span class="ms-1" data-bs-toggle="tooltip" title="Danh mục của sản phẩm">
+                                    <i class="ki-duotone ki-information-5 text-gray-500 fs-6"><span
+                                            class="path1"></span><span class="path2"></span><span
+                                            class="path3"></span></i></span> </label>
+                            <!--end::Label-->
+
+                            <input type="text" class="form-control form-control-solid" placeholder=""
+                                name="card_name" />
+                        </div>
+                        <!--end::Input group-->
+
+                        <!--begin::Input group-->
+                        {{-- <div class="d-flex flex-column mb-7 fv-row">
+                            <!--begin::Label-->
+                            <label class="required fs-6 fw-semibold form-label mb-2">Card Number</label>
+                            <!--end::Label-->
+
+                            <!--begin::Input wrapper-->
+                            <div class="position-relative">
+                                <!--begin::Input-->
+                                <input type="text" class="form-control form-control-solid"
+                                    placeholder="Enter card number" name="card_number" value="4111 1111 1111 1111" />
+                                <!--end::Input-->
+
+                                <!--begin::Card logos-->
+                                <div class="position-absolute translate-middle-y top-50 end-0 me-5">
+                                    <img src="/axel-html-pro/assets/media/svg/card-logos/visa.svg" alt=""
+                                        class="h-25px" />
+                                    <img src="/axel-html-pro/assets/media/svg/card-logos/mastercard.svg" alt=""
+                                        class="h-25px" />
+                                    <img src="/axel-html-pro/assets/media/svg/card-logos/american-express.svg"
+                                        alt="" class="h-25px" />
+                                </div>
+                                <!--end::Card logos-->
+                            </div>
+                            <!--end::Input wrapper-->
+                        </div> --}}
+                        <!--end::Input group-->
+
+                        <!--begin::Input group-->
+                        {{-- <div class="row mb-10">
+                            <!--begin::Col-->
+                            <div class="col-md-8 fv-row">
+                                <!--begin::Label-->
+                                <label class="required fs-6 fw-semibold form-label mb-2">Expiration Date</label>
+                                <!--end::Label-->
+
+                                <!--begin::Row-->
+                                <div class="row fv-row">
+                                    <!--begin::Col-->
+                                    <div class="col-6">
+                                        <select name="card_expiry_month" class="form-select form-select-solid"
+                                            data-control="select2" data-hide-search="true" data-placeholder="Month">
+                                            <option></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                    </div>
+                                    <!--end::Col-->
+
+                                    <!--begin::Col-->
+                                    <div class="col-6">
+                                        <select name="card_expiry_year" class="form-select form-select-solid"
+                                            data-control="select2" data-hide-search="true" data-placeholder="Year">
+                                            <option></option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                            <option value="2032">2032</option>
+                                            <option value="2033">2033</option>
+                                        </select>
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Row-->
+                            </div>
+                            <!--end::Col-->
+
+                            <!--begin::Col-->
+                            <div class="col-md-4 fv-row">
+                                <!--begin::Label-->
+                                <label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+                                    <span class="required">CVV</span>
+
+
+                                    <span class="ms-1" data-bs-toggle="tooltip" title="Enter a card CVV code">
+                                        <i class="ki-duotone ki-information-5 text-gray-500 fs-6"><span
+                                                class="path1"></span><span class="path2"></span><span
+                                                class="path3"></span></i></span> </label>
+                                <!--end::Label-->
+
+                                <!--begin::Input wrapper-->
+                                <div class="position-relative">
+                                    <!--begin::Input-->
+                                    <input type="text" class="form-control form-control-solid" minlength="3"
+                                        maxlength="4" placeholder="CVV" name="card_cvv" />
+                                    <!--end::Input-->
+
+                                    <!--begin::CVV icon-->
+                                    <div class="position-absolute translate-middle-y top-50 end-0 me-3">
+                                        <i class="ki-duotone ki-credit-cart fs-2hx"><span class="path1"></span><span
+                                                class="path2"></span></i>
+                                    </div>
+                                    <!--end::CVV icon-->
+                                </div>
+                                <!--end::Input wrapper-->
+                            </div>
+                            <!--end::Col-->
+                        </div> --}}
+                        <!--end::Input group-->
+
+                        <!--begin::Input group-->
+                        {{-- <div class="d-flex flex-stack">
+                            <!--begin::Label-->
+                            <div class="me-5">
+                                <label class="fs-6 fw-semibold form-label">Save Card for further billing?</label>
+                                <div class="fs-7 fw-semibold text-muted">If you need more info, please check budget
+                                    planning</div>
+                            </div>
+                            <!--end::Label-->
+
+                            <!--begin::Switch-->
+                            <label class="form-check form-switch form-check-custom form-check-solid">
+                                <input class="form-check-input" type="checkbox" value="1" checked="checked" />
+                                <span class="form-check-label fw-semibold text-muted">
+                                    Save Card
+                                </span>
+                            </label>
+                            <!--end::Switch-->
+                        </div> --}}
+                        <!--end::Input group-->
+
+
+                        <!--begin::Actions-->
+                        <div class="text-center pt-15">
+                            {{-- <button type="reset" id="kt_modal_new_card_cancel" class="btn btn-light me-3">
+                                Loại bỏ
+                            </button> --}}
+
+                            <button type="submit" id="kt_modal_new_card_submit" class="btn btn-primary">
+                                <span class="indicator-label">
+                                    Thêm
+                                </span>
+                                <span class="indicator-progress">
+                                    Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                                </span>
+                            </button>
+                        </div>
+                        <!--end::Actions-->
+                    </form>
+                    <!--end::Form-->
+                </div>
+                <!--end::Modal body-->
+            </div>
+            <!--end::Modal content-->
+        </div>
+        <!--end::Modal dialog-->
+    </div>
+    <!--end::Modal - New Card-->
     <!--end:::Main-->
 @endsection

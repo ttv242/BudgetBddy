@@ -28,7 +28,10 @@ return new class extends Migration
             $table->string('workplace')->nullable();
             $table->string('username');
             $table->string('password');
+            $table->integer('group_id')->default(0);
+            $table->integer('member_id')->default(0);
             $table->tinyInteger('role')->default(0);
+            $table->tinyInteger('role_group')->default(0);
             $table->timestamps();
         });
     }

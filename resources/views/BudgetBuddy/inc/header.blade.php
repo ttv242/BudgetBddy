@@ -35,8 +35,10 @@ License: For each use you must have a valid license purchased only from above li
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" /> <!--end::Fonts-->
 
     <!--begin::Vendor Stylesheets(used for this page only)-->
-    <link href="{{ asset('BudgetBuddy/plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet"
+    @if (Route::currentRouteName() == 'wizard')
+        <link href="{{ asset('BudgetBuddy/plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet"
         type="text/css" />
+    @endif
     <link href="{{ asset('BudgetBuddy/plugins/custom/datatables/datatables.bundle.css') }}" rel="stylesheet"
         type="text/css" />
     <!--end::Vendor Stylesheets-->
@@ -48,7 +50,7 @@ License: For each use you must have a valid license purchased only from above li
     <!--end::Global Stylesheets Bundle-->
 
     <!--begin::Google tag-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37564768-1"></script>
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37564768-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -64,7 +66,7 @@ License: For each use you must have a valid license purchased only from above li
         if (window.top != window.self) {
             window.top.location.replace(window.self.location.href);
         }
-    </script>
+    </script> --}}
 </head>
 <!--end::Head-->
 
@@ -2067,18 +2069,18 @@ License: For each use you must have a valid license purchased only from above li
 
                                             <!--begin::Menu item-->
                                             <div class="menu-item px-3">
-                                                <a href="{{ route('billing') }}"
+                                                <a href="{{ route('statements') }}"
                                                     class="menu-link px-5">
-                                                    Thanh toán
+                                                    Thu nhập
                                                 </a>
                                             </div>
                                             <!--end::Menu item-->
 
                                             <!--begin::Menu item-->
                                             <div class="menu-item px-3">
-                                                <a href="{{ route('statements') }}"
+                                                <a href="{{ route('billing') }}"
                                                     class="menu-link px-5">
-                                                    Thu nhập
+                                                    Thanh toán
                                                 </a>
                                             </div>
                                             <!--end::Menu item-->

@@ -6,7 +6,11 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use Carbon\Carbon;
+use Illuminate\Routing\Route;
 use DB;
+
+use App\Models\Group;
+
 
 class Controller extends BaseController
 {
@@ -18,10 +22,10 @@ class Controller extends BaseController
         if (auth()->check()) {
             // Truy xuất thông tin người dùng
             $user = auth()->user();
-
-            // Tiếp tục xử lý hoặc gán biến $user cho các phương thức khác
         }
     }
+
+
 
     public function uploadImage($id, $table, $column, $file, $filepath)
     {
@@ -85,6 +89,12 @@ class Controller extends BaseController
         }
     }
 
+    public function insertData($table, $data)
+    {
+        $data['created_at'] = Carbon::now();
+        $id = DB::table($table)->insert($data);
+        return $id;
+    }
 
     public function processPostRequest($request)
     {

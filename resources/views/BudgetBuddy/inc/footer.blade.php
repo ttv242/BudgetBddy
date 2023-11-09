@@ -4566,6 +4566,7 @@
     <!--begin::Javascript-->
     <script>
         var hostUrl = "{{ asset('BudgetBuddy') }}";
+        // console.log(hostUrl)
     </script>
 
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
@@ -4588,8 +4589,16 @@
     <script src="{{ asset('BudgetBuddy/lib/5/geodata/worldTimeZoneAreasLow.js') }}"></script>
     <script src="{{ asset('BudgetBuddy/plugins/custom/datatables/datatables.bundle.js') }}"></script>
     <!--end::Vendors Javascript-->
-
+    
     <!--begin::Custom Javascript(used for this page only)-->
+    @php
+        $routesToInclude = ['wizard'];
+    @endphp
+
+    @if (in_array(Route::currentRouteName(), $routesToInclude))
+        <script src="{{ asset('BudgetBuddy/js/custom/utilities/modals/create-account.js') }}"></script>
+    @endif
+
     <script src="{{ asset('BudgetBuddy/js/widgets.bundle.js') }}"></script>
     <script src="{{ asset('BudgetBuddy/js/custom/widgets.js') }}"></script>
     <script src="{{ asset('BudgetBuddy/js/custom/apps/chat/chat.js') }}"></script>

@@ -9,6 +9,7 @@
 
     $count = $user->avatar_img == "blank.svg" ? $count-1 : $count;
     $percent = round((($count+1) * 100) / count($user->toArray()), 1);
+    session(['percent' => $percent]);
 @endphp
 
 <div class="card mb-5 mb-xl-10">
@@ -272,7 +273,8 @@
                                 <!--end::Number-->
 
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Earnings
+                                <div class="fw-semibold fs-6 text-gray-400">
+                                    Tài khoản
                                 </div>
                                 <!--end::Label-->
                             </div>
@@ -290,7 +292,7 @@
                                 <!--end::Number-->
 
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Projects
+                                <div class="fw-semibold fs-6 text-gray-400">Chi tiêu
                                 </div>
                                 <!--end::Label-->
                             </div>
@@ -308,8 +310,9 @@
                                 <!--end::Number-->
 
                                 <!--begin::Label-->
-                                <div class="fw-semibold fs-6 text-gray-400">Success
-                                    Rate</div>
+                                <div class="fw-semibold fs-6 text-gray-400">
+                                    Số nợ
+                                </div>
                                 <!--end::Label-->
                             </div>
                             <!--end::Stat-->
@@ -344,59 +347,29 @@
         <ul class="nav nav-stretch nav-line-tabs nav-line-tabs-2x border-transparent fs-5 fw-bold">
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 active" href="{{ route('overview') }}">
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{ \App\Helpers\Helper::isActiveRoute('overview') }}" href="{{ route('overview') }}">
                     Tổng quan </a>
             </li>
             <!--end::Nav item-->
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="{{ route('settings') }}">
-                    Cài đặt
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{ \App\Helpers\Helper::isActiveRoute('statements') }}" href="{{ route('statements') }}">
+                    Thu nhập
                 </a>
             </li>
             <!--end::Nav item-->
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="/axel-html-pro/account/security.html">
-                    Bảo vệ
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{ \App\Helpers\Helper::isActiveRoute('billing') }}" href="{{ route('billing') }}">
+                    Thanh toán
                 </a>
             </li>
             <!--end::Nav item-->
             <!--begin::Nav item-->
             <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="/axel-html-pro/account/activity.html">
-                    Hoạt động
+                <a class="nav-link text-active-primary ms-0 me-10 py-5 {{ \App\Helpers\Helper::isActiveRoute('overview') }}" href="{{ route('statements') }}">
+                    Ghi nợ
                 </a>
-            </li>
-            <!--end::Nav item-->
-            <!--begin::Nav item-->
-            <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="{{ route('billing') }}">
-                    Billing </a>
-            </li>
-            <!--end::Nav item-->
-            <!--begin::Nav item-->
-            <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="{{ route('statements') }}">
-                    Statements </a>
-            </li>
-            <!--end::Nav item-->
-            <!--begin::Nav item-->
-            <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="/axel-html-pro/account/referrals.html">
-                    Referrals </a>
-            </li>
-            <!--end::Nav item-->
-            <!--begin::Nav item-->
-            <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="/axel-html-pro/account/api-keys.html">
-                    API Keys </a>
-            </li>
-            <!--end::Nav item-->
-            <!--begin::Nav item-->
-            <li class="nav-item mt-2">
-                <a class="nav-link text-active-primary ms-0 me-10 py-5 " href="/axel-html-pro/account/logs.html">
-                    Logs </a>
             </li>
             <!--end::Nav item-->
         </ul>

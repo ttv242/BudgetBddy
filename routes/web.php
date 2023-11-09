@@ -22,7 +22,9 @@ Route::middleware(['auth', 'role:user'])->group(function () {
     Route::get('/about', [PagesController::class, 'about'])->name('about');
     Route::get('/invoice', [PagesController::class, 'invoice'])->name('invoice');
     Route::get('/faq', [PagesController::class, 'faq'])->name('faq');
+
     Route::get('/wizard', [PagesController::class, 'wizard'])->name('wizard');
+    Route::post('/wizard/post', [PagesController::class, 'wizard_'])->name('wizard_');
 });
 
 // Account
